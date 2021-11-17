@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: DeathSwipe
+  m_Controller: {fileID: 9100000, guid: cea0d620c0149c14cad33f4f91aba47a, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 61124855d7b04a44b890eff616f714c5, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 936e20d12159e89418649203c59ab90e, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b4ac3b6eb2be9ef458f94d37e3e6eb40, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 7f5bf41e01a655e4a867cd97b43356dd, type: 2}
