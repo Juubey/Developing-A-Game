@@ -157,6 +157,8 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        
+
         if(other.gameObject.CompareTag("Obstacle"))
         {
             Vector2 _wallNormal = other.contacts[0].normal; //saves the point of contact
@@ -164,6 +166,7 @@ public class PlayerController : MonoBehaviour
 
             //m_rigid2D.velocity = m_dir * moveSpeed; wayy too fast
             m_rigid2D.velocity = m_dir; // perfect speed *chef kiss*
+            Instantiate(impactEffect, transform.position, transform.rotation);
         }
         if(other.gameObject.CompareTag("Enemy")) //if object hit has enemy tab show hitmarker
         {
@@ -172,10 +175,13 @@ public class PlayerController : MonoBehaviour
             
             //enemy.GetComponent<Enemy>().TakeDamage(damage);
             hitMarker.GetComponent<HitMarker>().HitEnable();
+            Instantiate(impactEffect, transform.position, transform.rotation);
+        }
+        else{
+            //Destroy(Instantiate(impactEffect, transform.position, transform.rotation));
+            //Destroy(gameObject); //Destroys the projectile
         }
 
-        Instantiate(impactEffect, transform.position, transform.rotation);
-        //Destroy(gameObject); //Destroys the projectile
     }
 
     bool CheckIfHitObstacle()

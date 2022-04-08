@@ -22,10 +22,11 @@ public class lineOfSight : MonoBehaviour
         if(hitInfo.collider != null){
             Debug.DrawLine(transform.position, hitInfo.point, Color.red);
             sightLine.SetPosition(1, hitInfo.point);
-            sightLine.colorGradient = redColor;
+            sightLine.colorGradient = greenColor;
 
             if(hitInfo.collider.CompareTag("Player")){
-               Debug.Log("Spotted Player = " + hitInfo.collider.CompareTag("Player")); 
+               Debug.Log("Spotted Player = " + hitInfo.collider.CompareTag("Player"));
+               sightLine.colorGradient = redColor; 
             }
         }else {
             Debug.DrawLine(transform.position, transform.position + transform.right * distance, Color.green);
