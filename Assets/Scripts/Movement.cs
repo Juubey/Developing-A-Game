@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
 {
@@ -85,7 +86,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         isGrounded |= coll.onGround;
         groundTouch = isGrounded;
 
-        if (coll.onWall && Input.GetButton("Fire3") && canMove)
+        if (coll.onWall && Keyboard.current.shiftKey.wasPressedThisFrame && canMove)
         {
             if(side != coll.wallSide)
                 anim.Flip(side*-1);
@@ -93,7 +94,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
             wallSlide = false;
         }
 
-        if (Input.GetButtonUp("Fire3") || !coll.onWall || !canMove)
+        if (Keyboard.current.shiftKey.wasPressedThisFrame || !coll.onWall || !canMove)
         {
             wallGrab = false;
             wallSlide = false;
@@ -132,7 +133,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         if (!coll.onWall || coll.onGround)
             wallSlide = false;
 
-        if (Input.GetButtonDown("Jump") /*|| Input.GetButtonUp("Jump")*/)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame)
         {
             anim.SetTrigger("jump");
             jumpTimer = 0.2f;
@@ -147,7 +148,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
                 WallJump();
         }
 
-        if (Input.GetButtonUp("Fire3") && !hasDashed) //previously was fire1
+        if (Keyboard.current.shiftKey.wasPressedThisFrame && !hasDashed) //previously was fire1
         {
             if(xRaw != 0 || yRaw != 0)
                 Dash(xRaw, yRaw);
@@ -157,6 +158,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         {
             GroundTouch();
             groundTouch = true;
+            anim.SetTrigger("land");
         }
 
         if(!coll.onGround && groundTouch)
@@ -287,12 +289,12 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         if (!wallJumped)
         {
             rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
-            dustParticle.Play();
+            //dustParticle.Play();
         }
         else
         {
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
-            dustParticle.Play();
+            //dustParticle.Play();
         }
     }
 

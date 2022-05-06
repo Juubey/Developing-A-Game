@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerCombat : MonoBehaviour
 {
+    [Space]
+    [Header("attack state")]
     public bool attack;
     public Transform attackBox;
     public int attackDamage = 30;
@@ -23,9 +26,8 @@ void Start()
         if(Time.time >= nextAttackTime){
 
         
-            if(Input.GetKeyDown(KeyCode.Q))
+            if(Keyboard.current.qKey.wasPressedThisFrame)
             {
-                //anim.SetTrigger("attack");
                 Attack();
                 nextAttackTime = Time.time + 1f / attackRate;
             }

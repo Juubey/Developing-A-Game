@@ -6,7 +6,9 @@ TagManager:
   tags:
   - Obstacle
   - Bullet
+  - Projectile
   - Enemy
+  - Fx
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Destructibles
   - PlayerBullet
   - Player
-  - 
+  - Tome & Spear
   - 
   - 
   - 
@@ -43,4 +45,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Cursor
+    uniqueID: 202463363
     locked: 0

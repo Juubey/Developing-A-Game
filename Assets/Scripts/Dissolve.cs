@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Dissolve : MonoBehaviour
 {
     Material material;
     bool isDissolving = false;
     float fade = 1f;
+
+    public Player Player;
 
     void Start()
     {
@@ -16,7 +19,7 @@ public class Dissolve : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Player.isAlive == false)
         {
             isDissolving = true;
         }
