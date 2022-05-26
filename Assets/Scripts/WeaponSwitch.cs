@@ -122,7 +122,7 @@ public class WeaponSwitch : MonoBehaviour
             else
                 weapon.gameObject.SetActive(false);
             i++;
-            Instantiate(weapon.gameObject, weaponsHolder.transform);
+            //Instantiate(weapon.gameObject, weaponsHolder.transform);
         }
     }
 

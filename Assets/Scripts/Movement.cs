@@ -1,19 +1,30 @@
-﻿using System;
+﻿/*
+ * Movement.cs
+ * Author(s): Albert Njubi
+ * Based on code from Mix & Jam/André Cardoso https://github.com/mixandjam/Celeste-Movement
+ * & TaroDev https://github.com/Matthew-J-Spencer/Ultimate-2D-Controller
+ * Date Created: 7/1/19
+ */
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.InputSystem;
 
+
+/// <summary>
+/// This class handles the GameObject player movement, 
+/// including its animations and stats.
+/// </summary>
 public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
 {
+    #region public variables
     public static Movement instance;
-    private Collision coll;
-    [HideInInspector]
-    public Rigidbody2D rb;
-    private AnimationScript anim;
+    [HideInInspector] public Rigidbody2D rb;
 
+    [Space]
+    public int side = 1;
 
+    #region Public Floats
     [Space]
     [Header("Stats")]
     public float speed = 10;
@@ -22,7 +33,10 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     public float wallJumpLerp = 10;
     public float dashSpeed = 20;
     private float jumpTimer;
+    public float groundedTimer = 0;
+    #endregion
 
+    #region Public Bools
     [Space]
     [Header("Booleans")]
     public bool canMove;
@@ -30,24 +44,9 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     public bool wallJumped;
     public bool wallSlide;
     public bool isDashing;
- 
+    #endregion
 
-    //private bool groundTouch;
-    public bool groundTouch {
-        get{
-            return groundedTimer > 0;
-        } 
-        set {
-            groundedTimer = value ? 10f : groundedTimer;    
-        } 
-    }
-
-    [Space]
-    public float groundedTimer = 0;
-    private bool hasDashed;
-
-    public int side = 1;
-
+    #region Public ParticleSystem
     [Space]
     [Header("Polish")]
     public ParticleSystem dashParticle;
@@ -56,8 +55,23 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     public ParticleSystem slideParticle;
     public ParticleSystem dustParticle;
     public ParticleSystem PowerUpParticle;
+    #endregion
 
-    // Start is called before the first frame update
+    #endregion
+    #region private variables
+    private Collision coll;
+    [HideInInspector] private AnimationScript anim;
+
+    [Space]
+    private bool hasDashed;
+    #endregion
+
+    #region private functions
+    /// <summary>
+    /// The start method retrives the player components, 
+    /// being the Collider, Rigidbody2D and 
+    /// AnimationScript Class.
+    /// </summary>
     void Start()
     {
         coll = GetComponent<Collision>();
@@ -65,7 +79,11 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         anim = GetComponentInChildren<AnimationScript>();
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// This Update method handles the input, and boolen
+    /// modifiers which determine how the player moves.
+    /// BetterJumping class is referenced. 
+    /// </summary>
     void Update()
     {
         float x = Input.GetAxis("Horizontal");
@@ -148,7 +166,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
                 WallJump();
         }
 
-        if (Keyboard.current.shiftKey.wasPressedThisFrame && !hasDashed) //previously was fire1
+        if (Keyboard.current.shiftKey.wasPressedThisFrame && !hasDashed)
         {
             if(xRaw != 0 || yRaw != 0)
                 Dash(xRaw, yRaw);
@@ -187,6 +205,9 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
 
     }
 
+    /// <summary>
+    /// Plays the jumpParticle if able to jump
+    /// </summary>
     void GroundTouch()
     {
         hasDashed = false;
@@ -197,6 +218,10 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         jumpParticle.Play();
     }
 
+    /// <summary>
+    /// Plays the RippleEffect and Dash animation,
+    /// then calls coroutine until the next dash is ready. 
+    /// </summary>
     private void Dash(float x, float y)
     {
         Camera.main.transform.DOComplete();
@@ -214,6 +239,153 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         StartCoroutine(DashWait());
     }
 
+    /// <summary>
+    /// Flips the player sprite then starts a coroutine
+    /// that disables movement for a brief moment until
+    /// the player can jump again.
+    /// </summary>
+    private void WallJump()
+    {
+        if ((side == 1 && coll.onRightWall) || side == -1 && !coll.onRightWall)
+        {
+            side *= -1;
+            anim.Flip(side);
+        }
+
+        StopCoroutine(DisableMovement(0));
+        StartCoroutine(DisableMovement(.1f));
+
+        Vector2 wallDir = coll.onRightWall ? Vector2.left : Vector2.right;
+
+        Jump((Vector2.up / 1.5f + wallDir / 1.5f), true);
+
+        wallJumped = true;
+    }
+
+    /// <summary>
+    /// Flips the player sprite based on the side the wall is on,
+    /// then returns if the player cannot move.
+    /// If the players moving horizontally then the player is 
+    /// pushing a wall
+    /// </summary>
+    private void WallSlide()
+    {
+        if (coll.wallSide != side)
+            anim.Flip(side * -1);
+
+        if (!canMove)
+            return;
+
+        bool pushingWall = false;
+        if ((rb.velocity.x > 0 && coll.onRightWall) || (rb.velocity.x < 0 && coll.onLeftWall))
+        {
+            pushingWall = true;
+        }
+        float push = pushingWall ? 0 : rb.velocity.x;
+
+        rb.velocity = new Vector2(push, -slideSpeed);
+    }
+
+    /// <summary>
+    /// This function checks if the player is able to move
+    /// and sets the rigidbody velocity.
+    /// </summary>
+    private void Walk(Vector2 dir)
+    {
+        if (!canMove)
+            return;
+
+        if (wallGrab)
+            return;
+
+        if (!wallJumped)
+        {
+            rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
+            //dustParticle.Play();
+        }
+        else
+        {
+            rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
+            //dustParticle.Play();
+        }
+    }
+
+    /// <summary>
+    /// This function modifies the players verticle velocity.
+    /// Then plays the jump particle effect.
+    /// </summary>
+    private void Jump(Vector2 dir, bool wall)
+    {
+        slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
+        ParticleSystem particle = wall ? wallJumpParticle : jumpParticle;
+
+        rb.velocity = new Vector2(rb.velocity.x, 0);
+        rb.velocity += dir * jumpForce;
+
+        particle.Play();
+    }
+
+    /// <summary>
+    /// Gets the coefficient of the rigidbodys drag
+    /// </summary>
+    void RigidbodyDrag(float x)
+    {
+        rb.drag = x;
+    }
+
+    /// <summary>
+    /// Plays the slide particle if the player is on a wall
+    /// and sliding.
+    /// </summary>
+    void WallParticle(float vertical)
+    {
+        var main = slideParticle.main;
+
+        if (wallSlide || (wallGrab && vertical < 0))
+        {
+            slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
+            main.startColor = Color.white;
+        }
+        else
+        {
+            main.startColor = Color.clear;
+        }
+    }
+
+    /// <summary>
+    /// Returns which side the particle should be on.
+    /// </summary>
+    int ParticleSide()
+    {
+        int particleSide = coll.onRightWall ? 1 : -1;
+        return particleSide;
+    }
+    #endregion
+
+    #region public functions
+    /// <summary>
+    /// Sets a timer for how long the player has touched
+    /// the ground and returns that variable.
+    /// </summary
+    public bool groundTouch
+    {
+        get
+        {
+            return groundedTimer > 0;
+        }
+        set
+        {
+            groundedTimer = value ? 10f : groundedTimer;
+        }
+    }
+    #endregion
+
+    #region coroutines
+
+    /// <summary>
+    /// This coroutine starts a timer after the player has dashed.
+    /// During this time the players gravity is modified.
+    /// </summary
     IEnumerator DashWait()
     {
         FindObjectOfType<GhostTrail>().ShowGhost();
@@ -235,6 +407,10 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         isDashing = false;
     }
 
+    /// <summary>
+    /// Returns a float for a waiting time until
+    /// the player can ground dash again.
+    /// </summary
     IEnumerator GroundDash()
     {
         yield return new WaitForSeconds(.15f);
@@ -242,73 +418,10 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
             hasDashed = false;
     }
 
-    private void WallJump()
-    {
-        if ((side == 1 && coll.onRightWall) || side == -1 && !coll.onRightWall)
-        {
-            side *= -1;
-            anim.Flip(side);
-        }
 
-        StopCoroutine(DisableMovement(0));
-        StartCoroutine(DisableMovement(.1f));
-
-        Vector2 wallDir = coll.onRightWall ? Vector2.left : Vector2.right;
-
-        Jump((Vector2.up / 1.5f + wallDir / 1.5f), true);
-
-        wallJumped = true;
-    }
-
-    private void WallSlide()
-    {
-        if(coll.wallSide != side)
-         anim.Flip(side * -1);
-
-        if (!canMove)
-            return;
-
-        bool pushingWall = false;
-        if((rb.velocity.x > 0 && coll.onRightWall) || (rb.velocity.x < 0 && coll.onLeftWall))
-        {
-            pushingWall = true;
-        }
-        float push = pushingWall ? 0 : rb.velocity.x;
-
-        rb.velocity = new Vector2(push, -slideSpeed);
-    }
-
-    private void Walk(Vector2 dir)
-    {
-        if (!canMove)
-            return;
-
-        if (wallGrab)
-            return;
-
-        if (!wallJumped)
-        {
-            rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
-            //dustParticle.Play();
-        }
-        else
-        {
-            rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
-            //dustParticle.Play();
-        }
-    }
-
-    private void Jump(Vector2 dir, bool wall)
-    {
-        slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
-        ParticleSystem particle = wall ? wallJumpParticle : jumpParticle;
-
-        rb.velocity = new Vector2(rb.velocity.x, 0);
-        rb.velocity += dir * jumpForce;
-
-        particle.Play();
-    }
-
+    /// <summary>
+    /// Disables player movement.
+    /// </summary
     IEnumerator DisableMovement(float time)
     {
         canMove = false;
@@ -316,30 +429,6 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         canMove = true;
     }
 
-    void RigidbodyDrag(float x)
-    {
-        rb.drag = x;
-    }
+    #endregion
 
-    void WallParticle(float vertical)
-    {
-        var main = slideParticle.main;
-
-        if (wallSlide || (wallGrab && vertical < 0))
-        {
-            slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
-            main.startColor = Color.white;
-        }
-        else
-        {
-            main.startColor = Color.clear;
-        }
-    }
-
-    int ParticleSide()
-    {
-        int particleSide = coll.onRightWall ? 1 : -1;
-        return particleSide;
-    }
-    
 }
