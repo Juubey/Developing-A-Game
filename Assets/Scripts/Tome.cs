@@ -67,7 +67,7 @@ public class Tome : MonoBehaviour
     {
         //TO DO: Create a draw circle which limits the area in which a bullet can be spawned which is attached to player!!!
 
-        if(inputData.isPressed_1 == true)
+        if(inputData.isPressed == true)
         {
             if (tomeLogic.IsWithPlayer()){
             //m_rigid2D.bodyType = RigidbodyType2D.Dynamic;
@@ -98,7 +98,7 @@ public class Tome : MonoBehaviour
             }
         }
 
-        if(inputData.isHeld_1 == true)
+        if(inputData.isHeld == true)
         {
             //m_rigid2D.bodyType = RigidbodyType2D.Static;
             if(m_hitBlock) // Optimized Check
@@ -107,7 +107,7 @@ public class Tome : MonoBehaviour
             m_playerVFX.MakeProjectilePulse();
         }
 
-        if(inputData.isReleased_1 == true)
+        if(inputData.isReleased == true)
         {
             //m_rigid2D.bodyType = RigidbodyType2D.Dynamic;
             if(m_hitBlock) // Optimized Check

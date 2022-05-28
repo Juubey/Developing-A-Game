@@ -58,6 +58,8 @@ public class PlayerController : MonoBehaviour
         Vector3 difference = m_cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f,0f,rotZ + offset);
+        Physics2D.IgnoreLayerCollision(13, 14);
+        Physics2D.IgnoreLayerCollision(10, 13);
     }
 
     void HandleMovement()
