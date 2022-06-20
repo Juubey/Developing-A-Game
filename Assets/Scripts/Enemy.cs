@@ -2,53 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
+using UnityEngine.InputSystem;
 
 public class Enemy : MonoBehaviour
 {
-    int currentHealth;
-    public int maxHealth = 100;
+    public float currentHealth;
+    public float maxHealth = 100;
     public GameObject deathEffect;
 
     public Animator animator;
     public AIPath aiPath;
+    public EnemyHealthBarBehavior Healthbar;
 
-    void start()
+    void Start()
     {
         currentHealth = maxHealth;
+        Healthbar.SetHealth(currentHealth, maxHealth);
     }
 
-    public void TakeDamage (int damage){
-        currentHealth -= damage;
+    public void TakeDamage (float damage){
 
-        animator.SetTrigger("Hurt");
+        if (currentHealth > 0)
+        {
+            currentHealth -= damage;
+        }
+            
+        //animator.SetTrigger("Hurt");
 
         if(currentHealth <= 0){
             Die();
         }
     }   
 
-    void update()
+    void Update()
     {
-        if(aiPath.desiredVelocity.x >= 0.0f)
+        if(Keyboard.current.kKey.wasPressedThisFrame)
         {
-            transform.localScale =  new Vector3(-1f, 1f, 1f);
-
-        }else if(aiPath.desiredVelocity.x <= -0.0f)
-            {
-                transform.localScale =  new Vector3(1f, 1f, 1f);
-            }
-        
+            TakeDamage(100f);
+            Debug.Log("Enemy is at " + currentHealth);
+        }
+        Healthbar.SetHealth(currentHealth, maxHealth);
     }
 
     void Die()
     {
         Debug.Log("Enemy Died!");
         //die animation
-        animator.SetBool("Death", true);
+        //animator.SetBool("Death", true);
         Instantiate(deathEffect, transform.position, Quaternion.identity);
         //disable enemy
         GetComponent<Collider2D>().enabled = false;
-        this.enabled = false;
+        enabled = false;
         Destroy(gameObject);
     }
 

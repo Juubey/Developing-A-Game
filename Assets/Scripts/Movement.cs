@@ -64,6 +64,10 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
 
     [Space]
     private bool hasDashed;
+    Playerinputs player;
+    Vector2 move;
+    Vector2 jump;
+    Vector2 dash;
     #endregion
 
     #region private functions
@@ -78,6 +82,10 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<AnimationScript>();
     }
+    private void Awake()
+    {
+        player = new Playerinputs();
+    }
 
     /// <summary>
     /// This Update method handles the input, and boolen
@@ -90,9 +98,13 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         float y = Input.GetAxis("Vertical");
         float xRaw = Input.GetAxisRaw("Horizontal");
         float yRaw = Input.GetAxisRaw("Vertical");
-        Vector2 dir = new Vector2(x, y);
+        //Vector2 dir = new Vector2(x, y); deprecated
         dustParticle.Stop();
-        
+        move = player.Player.Move.ReadValue<Vector2>();
+        jump = player.Player.Jump.ReadValue<Vector2>(); //TODO: Add input logic for jump
+        dash = player.Player.Dash.ReadValue<Vector2>();//TODO: Add input logic for dash
+
+        Vector2 dir = new Vector2(move.x + x, move.y + y);
 
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
@@ -158,7 +170,8 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
 
             //Jump
             if (groundTouch && jumpTimer > 0)
-                Jump(Vector2.up, false);
+                
+                jump = Jump(Vector2.up, false);
                 jumpTimer = 0;
                 groundedTimer = 0;
             
@@ -257,7 +270,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
 
         Vector2 wallDir = coll.onRightWall ? Vector2.left : Vector2.right;
 
-        Jump((Vector2.up / 1.5f + wallDir / 1.5f), true);
+        Jump(Vector2.up / 1.5f + wallDir / 1.5f, true);
 
         wallJumped = true;
     }
@@ -314,15 +327,15 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     /// This function modifies the players verticle velocity.
     /// Then plays the jump particle effect.
     /// </summary>
-    private void Jump(Vector2 dir, bool wall)
+    private Vector2 Jump(Vector2 dir, bool wall)
     {
         slideParticle.transform.parent.localScale = new Vector3(ParticleSide(), 1, 1);
         ParticleSystem particle = wall ? wallJumpParticle : jumpParticle;
 
         rb.velocity = new Vector2(rb.velocity.x, 0);
         rb.velocity += dir * jumpForce;
-
         particle.Play();
+        return rb.velocity;
     }
 
     /// <summary>

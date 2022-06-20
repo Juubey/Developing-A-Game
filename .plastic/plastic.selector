@@ -1,4 +1,0 @@
-repository "ProjectNairobi@NjonjoNjubi@cloud"
-  path "/"
-    br "/main"
-    co "/main"

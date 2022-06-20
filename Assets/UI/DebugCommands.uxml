@@ -1,0 +1,9 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement name="DebugCommands" style="flex-grow: 1; flex-direction: column; align-items: flex-start; justify-content: flex-end;">
+        <ui:VisualElement name="DebugCommand_Field" style="height: 150px; width: 50%; background-color: rgba(0, 0, 0, 0.43); -unity-background-image-tint-color: rgba(0, 0, 0, 0.4);">
+            <ui:TextField picking-mode="Ignore" text="|" name="TextField" style="align-items: flex-end; -unity-font: url(&apos;project://database/Library/unity%20default%20resources?fileID=10102&amp;guid=0000000000000000e000000000000000&amp;type=0#Arial&apos;); -unity-text-align: lower-left; transform-origin: center; opacity: 1; visibility: visible; display: flex; overflow: hidden; flex-shrink: 1; flex-grow: 1;">
+                <ui:Scroller high-value="100" direction="Vertical" value="42" style="display: flex; flex-shrink: 0; flex-grow: 0; justify-content: center; align-items: flex-end; flex-direction: column-reverse; width: 15px; height: 150px;" />
+            </ui:TextField>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
