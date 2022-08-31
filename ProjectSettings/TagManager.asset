@@ -9,6 +9,10 @@ TagManager:
   - Projectile
   - Enemy
   - Fx
+  - SoftSurface
+  - HardSurface
+  - BoundsCam
+  - Holder
   layers:
   - Default
   - TransparentFX
@@ -24,9 +28,9 @@ TagManager:
   - Destructibles
   - PlayerBullet
   - Player
-  - Tome & Spear
-  - 
-  - 
+  - Spear
+  - ProjectileBounds
+  - Tome
   - 
   - 
   - 

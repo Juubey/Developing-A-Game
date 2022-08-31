@@ -15,3 +15,9 @@ MonoBehaviour:
   isPressed: 0
   isHeld: 0
   isReleased: 0
+  isPressed_1: 0
+  isHeld_1: 0
+  isReleased_1: 0
+  isPressed_2: 0
+  isHeld_2: 0
+  isReleased_2: 0

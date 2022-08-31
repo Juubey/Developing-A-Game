@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class AnimationScript : MonoBehaviour
 {
+    public ParticleSystem dustParticle;
 
     private Animator anim;
     private Movement move;
@@ -19,6 +20,7 @@ public class AnimationScript : MonoBehaviour
         move = GetComponentInParent<Movement>();
         sr = GetComponent<SpriteRenderer>();
         atk = GetComponentInParent<PlayerCombat>();
+        dustParticle.Stop(true);
     }
 
     void Update()
@@ -30,7 +32,7 @@ public class AnimationScript : MonoBehaviour
         anim.SetBool("wallSlide", move.wallSlide);
         anim.SetBool("canMove", move.canMove);
         anim.SetBool("isDashing", move.isDashing);
-        anim.SetBool("attack", atk.attack);
+        //anim.SetBool("attack", atk.attack);
     }
 
     public void SetHorizontalMovement(float x,float y, float yVel)
@@ -47,7 +49,7 @@ public class AnimationScript : MonoBehaviour
 
     public void Flip(int side)
     {
-
+        
         if (move.wallGrab || move.wallSlide)
         {
             if (side == -1 && sr.flipX)
@@ -56,10 +58,38 @@ public class AnimationScript : MonoBehaviour
             if (side == 1 && !sr.flipX)
             {
                 return;
+
             }
+        }
+        if (move.canMove)
+        {
+            var _psm_emission = dustParticle.emission;
+
+            if (side == -1 && sr.flipX && dustParticle.isEmitting == false)
+            {
+                dustParticle.Play(true);
+                _psm_emission.enabled = true;
+                StartCoroutine(StopDust());
+            }
+
+            if (side == 1 && !sr.flipX && dustParticle.isEmitting == false)
+            {
+                dustParticle.Play(true);
+                _psm_emission.enabled = true;
+                StartCoroutine(StopDust());
+            }
+
+            else
+                StartCoroutine(StopDust());
         }
 
         bool state = (side == 1) ? false : true;
         sr.flipX = state;
+    }
+    IEnumerator StopDust()
+    {
+        // Stops particle effect
+        yield return new WaitForSeconds(.1f);
+        dustParticle.Stop();
     }
 }

@@ -3,6 +3,7 @@
  * Author(s): Albert Njubi
  * Based on code from Mix & Jam/André Cardoso https://github.com/mixandjam/Celeste-Movement
  * & TaroDev https://github.com/Matthew-J-Spencer/Ultimate-2D-Controller
+ * & Dawnosaur https://www.youtube.com/watch?v=KKGdDBFcu0Q
  * Date Created: 7/1/19
  */
 using System.Collections;
@@ -20,7 +21,8 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     #region public variables
     public static Movement instance;
     [HideInInspector] public Rigidbody2D rb;
-
+    public AfterImage afterImage;
+    public PlayerRunData Data;
     [Space]
     public int side = 1;
 
@@ -61,6 +63,8 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     #region private variables
     private Collision coll;
     [HideInInspector] private AnimationScript anim;
+    public BoxCollider2D hitbox;
+    public GameObject shotPoint;
 
     [Space]
     private bool hasDashed;
@@ -98,8 +102,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         float y = Input.GetAxis("Vertical");
         float xRaw = Input.GetAxisRaw("Horizontal");
         float yRaw = Input.GetAxisRaw("Vertical");
-        //Vector2 dir = new Vector2(x, y); deprecated
-        dustParticle.Stop();
+
         move = player.Player.Move.ReadValue<Vector2>();
         jump = player.Player.Jump.ReadValue<Vector2>(); //TODO: Add input logic for jump
         dash = player.Player.Dash.ReadValue<Vector2>();//TODO: Add input logic for dash
@@ -116,10 +119,24 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         isGrounded |= coll.onGround;
         groundTouch = isGrounded;
 
-        if (coll.onWall && Keyboard.current.shiftKey.wasPressedThisFrame && canMove)
+        var isGroundedOnSpear = false;
+        isGroundedOnSpear |= coll.onSpear;
+        groundTouchSpear = isGroundedOnSpear;
+
+        if ((rb.velocity.x < -14 || rb.velocity.x > 14) && !isDashing)
         {
-            if(side != coll.wallSide)
-                anim.Flip(side*-1);
+            afterImage.makeAfterImage = true;
+        }
+        else
+        {
+            afterImage.makeAfterImage = false;
+        }
+
+        if (coll.onWall && Keyboard.current.ctrlKey.wasPressedThisFrame && canMove)
+        {
+            if (side != coll.wallSide)
+                anim.Flip(side * -1);
+
             wallGrab = true;
             wallSlide = false;
         }
@@ -135,12 +152,12 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
             wallJumped = false;
             GetComponent<BetterJumping>().enabled = true;
         }
-        
+
         if (wallGrab && !isDashing)
         {
             rb.gravityScale = 0;
-            if(x > .2f || x < -.2f)
-            rb.velocity = new Vector2(rb.velocity.x, 0);
+            if (x > .2f || x < -.2f)
+                rb.velocity = new Vector2(rb.velocity.x, 0);
 
             float speedModifier = y > 0 ? .5f : 1;
 
@@ -151,7 +168,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
             rb.gravityScale = 3;
         }
 
-        if(coll.onWall && !coll.onGround)
+        if (coll.onWall && !coll.onGround)
         {
             if (x != 0 && !wallGrab)
             {
@@ -163,25 +180,24 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         if (!coll.onWall || coll.onGround)
             wallSlide = false;
 
-        if (Keyboard.current.spaceKey.wasPressedThisFrame)
+        if (Keyboard.current.spaceKey.wasPressedThisFrame) //Jump
         {
             anim.SetTrigger("jump");
             jumpTimer = 0.2f;
 
-            //Jump
-            if (groundTouch && jumpTimer > 0)
-                
+            if (groundTouch || groundTouchSpear && jumpTimer > 0)
+
                 jump = Jump(Vector2.up, false);
-                jumpTimer = 0;
-                groundedTimer = 0;
-            
+            jumpTimer = 0;
+            groundedTimer = 0;
+
             if (coll.onWall && !coll.onGround)
                 WallJump();
         }
 
         if (Keyboard.current.shiftKey.wasPressedThisFrame && !hasDashed)
         {
-            if(xRaw != 0 || yRaw != 0)
+            if (xRaw != 0 || yRaw != 0)
                 Dash(xRaw, yRaw);
         }
 
@@ -192,9 +208,22 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
             anim.SetTrigger("land");
         }
 
-        if(!coll.onGround && groundTouch)
+        if (!coll.onGround && groundTouch)
         {
             groundTouch = false;
+        }
+
+        if (coll.onSpear && !groundTouchSpear)
+        {
+            GroundTouchSpear();
+            groundTouchSpear = true;
+            anim.SetTrigger("land");
+            //anim.SetTrigger("wobble"); --------------------------TODO
+        }
+
+        if (!coll.onSpear && groundTouchSpear)
+        {
+            groundTouchSpear = false;
         }
 
         WallParticle(y);
@@ -202,19 +231,39 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         if (wallGrab || wallSlide || !canMove)
             return;
 
-        if(x > 0)
+
+        if (x > 0)
         {
             side = 1;
             anim.Flip(side);
-            dustParticle.Play();
+            //CreateDust();
+            hitbox.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+            shotPoint.transform.localPosition = new Vector3(2, 0, 0);
+
         }
         if (x < 0)
         {
             side = -1;
             anim.Flip(side);
-            dustParticle.Play();
+            //CreateDust();
+            hitbox.transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
+            shotPoint.transform.localPosition = new Vector3(-2, 0, 0);
         }
 
+        if (side == 1 || side == -1)
+        {
+            bool flipped;
+            if (rb.velocity.x < -14 || rb.velocity.x > 14)
+            {
+                flipped = true;
+                if (flipped == true)
+                    CreateDust();
+                return;
+            }
+            else
+                flipped = false;
+        }
+        
 
     }
 
@@ -229,6 +278,21 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         side = anim.sr.flipX ? -1 : 1;
 
         jumpParticle.Play();
+    }
+
+    void GroundTouchSpear()
+    {
+        hasDashed = false;
+        isDashing = false;
+
+        side = anim.sr.flipX ? -1 : 1;
+
+        jumpParticle.Play();
+    }
+
+    void CreateDust()
+    {
+        dustParticle.Play();
     }
 
     /// <summary>
@@ -313,13 +377,43 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
 
         if (!wallJumped)
         {
-            rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
-            //dustParticle.Play();
+            //rb.velocity = new Vector2(dir.x * speed, rb.velocity.y);
+            //Calculate the direction we want to move in and our desired velocity
+            //float targetSpeed = move.x * Data.runMaxSpeed;
+            float targetSpeed = dir.x * Data.runMaxSpeed;
+            #region Calculate AccelRate
+            float accelRate;
+
+            //Gets an acceleration value based on if we are accelerating (includes turning) 
+            //or trying to decelerate (stop). As well as applying a multiplier if we're air borne.
+            if (groundedTimer > 0)
+                accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount : Data.runDeccelAmount;
+            else
+                accelRate = (Mathf.Abs(targetSpeed) > 0.01f) ? Data.runAccelAmount * Data.accelInAir : Data.runDeccelAmount * Data.deccelInAir;
+            #endregion
+
+            #region Conserve Momentum
+            //We won't slow the player down if they are moving in their desired direction but at a greater speed than their maxSpeed
+            if (Data.doConserveMomentum && Mathf.Abs(rb.velocity.x) > Mathf.Abs(targetSpeed) && Mathf.Sign(rb.velocity.x) == Mathf.Sign(targetSpeed) && Mathf.Abs(targetSpeed) > 0.01f && groundedTimer < 0)
+            {
+                //Prevent any deceleration from happening, or in other words conserve are current momentum
+                //You could experiment with allowing for the player to slightly increae their speed whilst in this "state"
+                accelRate = 0;
+            }
+            #endregion
+
+            //Calculate difference between current velocity and desired velocity
+            float speedDif = targetSpeed - rb.velocity.x;
+            //Calculate force along x-axis to apply to thr player
+
+            float movement = speedDif * accelRate;
+
+            //Convert this to a vector and apply to rigidbody
+            rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
         }
         else
         {
             rb.velocity = Vector2.Lerp(rb.velocity, (new Vector2(dir.x * speed, rb.velocity.y)), wallJumpLerp * Time.deltaTime);
-            //dustParticle.Play();
         }
     }
 
@@ -337,6 +431,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         particle.Play();
         return rb.velocity;
     }
+
 
     /// <summary>
     /// Gets the coefficient of the rigidbodys drag
@@ -391,10 +486,20 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
             groundedTimer = value ? 10f : groundedTimer;
         }
     }
+    public bool groundTouchSpear
+    {
+        get
+        {
+            return groundedTimer > 0;
+        }
+        set
+        {
+            groundedTimer = value ? 10f : groundedTimer;
+        }
+    }
     #endregion
 
     #region coroutines
-
     /// <summary>
     /// This coroutine starts a timer after the player has dashed.
     /// During this time the players gravity is modified.
@@ -430,7 +535,10 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
         if (coll.onGround)
             hasDashed = false;
     }
-
+    IEnumerator GroundDust()
+    {
+        yield return new WaitForSeconds(.15f);
+    }
 
     /// <summary>
     /// Disables player movement.

@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     Vector3 m_releasedPos;
     Vector3 m_dir;
 
+    [SerializeField] Transform _FirePoint;
+
     [SerializeField]
     private Rigidbody2D m_rigid2D;
     public Transform Spear;
@@ -21,7 +23,6 @@ public class PlayerController : MonoBehaviour
     float calcSpeed;
     public float defaultTrailTime = 0.5f;
     bool m_hitBlock;
-    public Vector2 anchorPosition;
 
     [Space]
     [Header("Damage Calc")]
@@ -30,7 +31,7 @@ public class PlayerController : MonoBehaviour
     public GameObject impactEffect;
     public int damage = 30;
     public Transform firePoint;
-    
+
     public bool activateHitMarker = false;
 
     [SerializeField] private HitMarker hitMarker;
@@ -38,43 +39,56 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         GetComponent();
-        anchorPosition = transform.position;
+
     }
 
     void GetComponent()
     {
-        m_rigid2D = GetComponentInParent<Rigidbody2D>();
+        m_rigid2D = GetComponent<Rigidbody2D>();
         m_playerVFX = GetComponent<PlayerVFX>();
-        
+
 
         m_cam = FindObjectOfType<Camera>();
     }
+
+    /*
+    // convert screen coords
+    Vector2 adjustedPosition = mCamera.WorldToScreenPoint(transform.position);
+
+    adjustedPosition.x *= mCanvas.rect.width / (float) mCamera.pixelWidth;
+    adjustedPosition.y *= mCanvas.rect.height / (float) mCamera.pixelHeight;
+
+    // set it
+    mAnchorInUi.anchoredPosition = adjustedPosition - mCanvas.sizeDelta / 2f;
+    */
 
     void Update()
     {
         HandleMovement();
         AttackSpeedGen(ProjectileForce);
         //speedmult = ProjectileForce;
-        Vector3 difference = m_cam.ScreenToWorldPoint(Input.mousePosition) - transform.position;
+        Vector3 difference = m_cam.ScreenToViewportPoint(Input.mousePosition) - transform.position; 
         float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f,0f,rotZ + offset);
-        Physics2D.IgnoreLayerCollision(13, 14);
-        Physics2D.IgnoreLayerCollision(10, 13);
+        transform.rotation = Quaternion.Euler(0f, 0f, rotZ + offset);
     }
 
     void HandleMovement()
     {
         //TO DO: Create a draw circle which limits the area in which a bullet can be spawned which is attached to player!!!
 
-        if(inputData.isPressed == true)
+        //if (inputData.isPressed == true)
+        if (Input.GetMouseButtonDown(0))
         {
             m_hitBlock = CheckIfHitObstacle(); // Will store our check
 
-            if(CheckIfHitObstacle())
+            if (CheckIfHitObstacle())
                 return;
             //Debug.Log(Input.mousePosition);
-            m_clickedPos = m_cam.ScreenToWorldPoint(Input.mousePosition);
+            m_clickedPos = m_cam.ScreenToWorldPoint(Input.mousePosition) - _FirePoint.position; 
             m_clickedPos = new Vector3(m_clickedPos.x, m_clickedPos.y, 0f);
+
+
+
 
             resetPlayerPos();
 
@@ -86,21 +100,23 @@ public class PlayerController : MonoBehaviour
             //TO DO: && is area around player
         }
 
-        if(inputData.isHeld == true)
+        //if (inputData.isHeld == true)
+        if (Input.GetMouseButton(0))
         {
             m_rigid2D.bodyType = RigidbodyType2D.Static;
-            if(m_hitBlock) // Optimized Check
+            if (m_hitBlock) // Optimized Check
                 return;
-            m_playerVFX.SetDotPos(m_clickedPos, m_cam.ScreenToWorldPoint(Input.mousePosition));
+            m_playerVFX.SetDotPos(m_clickedPos, m_cam.ScreenToViewportPoint(Input.mousePosition));
             m_playerVFX.MakeProjectilePulse();
         }
 
-        if(inputData.isReleased == true)
+        //if (inputData.isReleased == true)
+        if (Input.GetMouseButtonUp(0))
         {
             m_rigid2D.bodyType = RigidbodyType2D.Dynamic;
-            if(m_hitBlock) // Optimized Check
+            if (m_hitBlock) // Optimized Check
                 return;
-            m_releasedPos = m_cam.ScreenToWorldPoint(Input.mousePosition);
+            m_releasedPos = m_cam.ScreenToViewportPoint(Input.mousePosition);
             m_releasedPos = new Vector3(m_releasedPos.x, m_releasedPos.y, 0f);
             //Debug.Log(m_releasedPos);
 
@@ -112,12 +128,12 @@ public class PlayerController : MonoBehaviour
 
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(firePoint.position, hitRadius/*, enemyLayers*/);
 
-        foreach(Collider2D enemy in hitEnemies)
-        {
-            Debug.Log("We hit " + enemy.name);
-        }
+            foreach (Collider2D enemy in hitEnemies)
+            {
+                Debug.Log("We hit " + enemy.name);
+            }
 
-        } 
+        }
     }
 
     void CalculateDirection()
@@ -138,17 +154,17 @@ public class PlayerController : MonoBehaviour
 
     float AttackSpeedGen(float ProjectileForce)
     {
-        if(ProjectileForce < 100)
-        {                
+        if (ProjectileForce < 100)
+        {
             ProjectileForce += Time.deltaTime * throwSpeedMult;
-                
+
             //Debug.Log(ProjectileForce);
         }
-        if(Input.GetButtonUp("Fire2"))
+        if (Input.GetButtonUp("Fire2"))
         {
             ProjectileForce = 0f;
         }
-        
+
         return (ProjectileForce);
     }
 
@@ -160,9 +176,9 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        
 
-        if(other.gameObject.CompareTag("Obstacle"))
+
+        if (other.gameObject.CompareTag("Obstacle"))
         {
             Vector2 _wallNormal = other.contacts[0].normal; //saves the point of contact
             m_dir = Vector2.Reflect(m_rigid2D.velocity, _wallNormal); // reflects the object while keeping the velocity
@@ -171,16 +187,17 @@ public class PlayerController : MonoBehaviour
             m_rigid2D.velocity = m_dir; // perfect speed *chef kiss*
             Instantiate(impactEffect, transform.position, transform.rotation);
         }
-        if(other.gameObject.CompareTag("Enemy")) //if object hit has enemy tab show hitmarker
+        if (other.gameObject.CompareTag("Enemy")) //if object hit has enemy tab show hitmarker
         {
             //Enemy enemy = other.GetComponent<Enemy>();
             //Debug.Log(other.name);
-            
+
             //enemy.GetComponent<Enemy>().TakeDamage(damage);
             hitMarker.GetComponent<HitMarker>().HitEnable();
             Instantiate(impactEffect, transform.position, transform.rotation);
         }
-        else{
+        else
+        {
             //Destroy(Instantiate(impactEffect, transform.position, transform.rotation));
             //Destroy(gameObject); //Destroys the projectile
         }
@@ -203,11 +220,7 @@ public class PlayerController : MonoBehaviour
         return _outsideBounds; //Will return true or false
     }
 
-    void OnBecameInvisible()
-    {
-        enabled = false;
-        Destroy(gameObject);
-    }
+
     public bool activeHitMarker()
     {
         activateHitMarker = true;

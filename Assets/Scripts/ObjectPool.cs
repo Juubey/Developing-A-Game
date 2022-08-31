@@ -26,8 +26,10 @@ public class ObjectPool : MonoBehaviour
         {
             GameObject obj1 = Instantiate(tomePrefab, parent.transform);
             GameObject obj2 = Instantiate(spearPrefab, parent.transform);
+
             obj1.SetActive(false);
             pooledObjects.Add(obj1);
+
             obj2.SetActive(false);
             pooledObjects.Add(obj2);
         }
@@ -43,11 +45,5 @@ public class ObjectPool : MonoBehaviour
             }
         }
         return null;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

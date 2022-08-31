@@ -66,13 +66,11 @@ public class PlayerVFX : MonoBehaviour
     {
         for(int i = 0; i < dotAmount; i++)
         {
-            //Vector3 _dotPos = m_dotArray[i].transform.position; //unnessesary
             Vector3 _dotPos = m_dotArray[i].transform.position;
             Vector3 _targetPos = Vector2.Lerp(startPos, endPos, /*(i + 1)*/ i * m_dotGap);
 
             float _smoothSpeed = (1f - followCurve.Evaluate(i * m_dotGap)) * followSpeed;
 
-            //m_dotArray[i].transform.position = _targetPos;
             m_dotArray[i].transform.position = Vector2.Lerp(_dotPos, _targetPos, _smoothSpeed * Time.deltaTime);
         }
     }
