@@ -21,7 +21,13 @@ public class DayNightCycle : MonoBehaviour
 
     public bool activateLights; // checks if lights are on
     public GameObject[] lights; // all the lights we want on when its dark
+    public GameObject[] dayLights; // all the lights we want on when its day
     public SpriteRenderer[] stars; // star sprites 
+
+    void Awake(){
+        lights = GameObject.FindGameObjectsWithTag("Lights");
+        dayLights = GameObject.FindGameObjectsWithTag("DayTimeLights");
+    }
 
     void Update()
     {
@@ -75,6 +81,14 @@ public class DayNightCycle : MonoBehaviour
             }
         }
 
+        if (time >= 0 && time < 10) // 19:00 / 7pm    -   until 11:00 / 11am 
+        {
+            for (int i = 0; i < dayLights.Length; i++)
+            {
+                dayLights[i].SetActive(false); // off
+            }
+        }
+
         if (time >= 310 && time < 320) // Dawn at 6:00 / 6am    -   until 7:00 / 7am
         {
             for (int i = 0; i < stars.Length; i++)
@@ -84,12 +98,19 @@ public class DayNightCycle : MonoBehaviour
             if (activateLights == true) // if lights are on
             {
 
-                    for (int i = 0; i < lights.Length; i++)
-                    {
-                        lights[i].SetActive(false); // shut them off
-                    }
-                    activateLights = false;
-                
+                for (int i = 0; i < lights.Length; i++)
+                {
+                    lights[i].SetActive(false); // shut them off
+                }
+                activateLights = false;
+               
+            }
+        }
+        if (time >= 380 && time < 390) // 12:00 / 12pm    -   until 18:00 / 6pm
+        {
+            for (int i = 0; i < dayLights.Length; i++)
+            {
+                dayLights[i].SetActive(true); // on
             }
         }
     }

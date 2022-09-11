@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class InputManager : MonoBehaviour
+public class InputDataManager : MonoBehaviour
 {
 
     public InputData inputData;

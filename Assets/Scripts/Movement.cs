@@ -16,7 +16,7 @@ using UnityEngine.InputSystem;
 /// This class handles the GameObject player movement, 
 /// including its animations and stats.
 /// </summary>
-public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
+public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTargetable*/
 {
     #region public variables
     public static Movement instance;
@@ -25,6 +25,7 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     public PlayerRunData Data;
     [Space]
     public int side = 1;
+    #endregion
 
     #region Public Floats
     [Space]
@@ -59,7 +60,6 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     public ParticleSystem PowerUpParticle;
     #endregion
 
-    #endregion
     #region private variables
     private Collision coll;
     [HideInInspector] private AnimationScript anim;
@@ -72,6 +72,9 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
     Vector2 move;
     Vector2 jump;
     Vector2 dash;
+
+    [Header("Attributes SO")]
+    [SerializeField] private AttributesScriptableObject playerAttributesSO;
     #endregion
 
     #region private functions
@@ -552,4 +555,33 @@ public class Movement : MonoBehaviour/*, EnemyHandler.IEnemyTargetable*/
 
     #endregion
 
+    public void LoadData(GameData data)
+    {
+        //this.transform.position = data.playerPosition;
+        // load the values from our game data into the scriptable object
+        playerAttributesSO.WrathStr = data.playerAttributesData.WrathStr;
+        playerAttributesSO.PrideAgi = data.playerAttributesData.PrideAgi;
+        playerAttributesSO.GreedLuck = data.playerAttributesData.GreedLuck;
+        playerAttributesSO.LustChar = data.playerAttributesData.LustChar;
+        playerAttributesSO.EnvyPer = data.playerAttributesData.EnvyPer;
+        playerAttributesSO.GluttonyInt = data.playerAttributesData.GluttonyInt;
+        playerAttributesSO.SlothEnd = data.playerAttributesData.SlothEnd;
+        playerAttributesSO.VaingloryRand = data.playerAttributesData.VaingloryRand;
+        playerAttributesSO.IngratitudeNeg = data.playerAttributesData.IngratitudeNeg;
+    }
+
+    public void SaveData(GameData data)
+    {
+        //data.playerPosition = this.transform.position;
+        // store the values from our scriptable object into the game data
+        data.playerAttributesData.WrathStr = playerAttributesSO.WrathStr;
+        data.playerAttributesData.PrideAgi = playerAttributesSO.PrideAgi;
+        data.playerAttributesData.GreedLuck = playerAttributesSO.GreedLuck;
+        data.playerAttributesData.LustChar = playerAttributesSO.LustChar;
+        data.playerAttributesData.EnvyPer = playerAttributesSO.EnvyPer;
+        data.playerAttributesData.GluttonyInt = playerAttributesSO.GluttonyInt;
+        data.playerAttributesData.SlothEnd = playerAttributesSO.SlothEnd;
+        data.playerAttributesData.VaingloryRand = playerAttributesSO.VaingloryRand;
+        data.playerAttributesData.IngratitudeNeg = playerAttributesSO.IngratitudeNeg;
+    }
 }
