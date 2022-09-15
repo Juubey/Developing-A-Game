@@ -54,14 +54,21 @@ public class Player : MonoBehaviour
         if(Keyboard.current.hKey.wasPressedThisFrame)
         {
             TakeDamage(20);
-            if(currentHealth == 0){           
+        }
+        if (currentHealth == 0)
+        {
             StartCoroutine(DeathDelay(0.1f));
-            }
         }
     }
 
-    void TakeDamage(int damage){
+    public void TakeDamage(int damage){
         currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+    }
+    public void TakeHeal(int heal)
+    {
+        currentHealth += heal;
 
         healthBar.SetHealth(currentHealth);
     }

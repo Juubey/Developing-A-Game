@@ -1,0 +1,1969 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.0f1 (6eacc8284459) revision 7253192'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19043) 64bit Core' Language: 'en' Physical Memory: 16222 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.0f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Users/rasen/OneDrive/Desktop/Unity Projects/Developing-A-Game
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+62042
+Successfully changed project path to: C:/Users/rasen/OneDrive/Desktop/Unity Projects/Developing-A-Game
+C:/Users/rasen/OneDrive/Desktop/Unity Projects/Developing-A-Game
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 114.01 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.0f1 (6eacc8284459)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/rasen/OneDrive/Desktop/Unity Projects/Developing-A-Game/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 Super with Max-Q Design (ID=0x1e91)
+    Vendor:   NVIDIA
+    VRAM:     8012 MB
+    Driver:   30.0.15.1295
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56828
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.009681 seconds.
+Native extension for WindowsStandalone target not found
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 100.82 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.663 seconds
+Domain Reload Profiling:
+	ReloadAssembly (663ms)
+		BeginReloadAssembly (71ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (482ms)
+			LoadAssemblies (70ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (99ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (300ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (32ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (101ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (126ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Registering precompiled user dll's ...
+Registered in 0.012037 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 108.10 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+Loading user settings - Package Manager log level set to [3]
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D68A8DA0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.514 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1515ms)
+		BeginReloadAssembly (110ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (19ms)
+		EndReloadAssembly (1305ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (270ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (82ms)
+			SetupLoadedEditorAssemblies (804ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (32ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (108ms)
+				BeforeProcessingInitializeOnLoad (142ms)
+				ProcessInitializeOnLoadAttributes (343ms)
+				ProcessInitializeOnLoadMethodAttributes (171ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 1.21 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5651 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 99 unused Assets / (1.9 MB). Loaded Objects now: 6148.
+Memory consumption went from 266.0 MB to 264.0 MB.
+Total: 6.518500 ms (FindLiveObjects: 0.400100 ms CreateObjectMapping: 0.390000 ms MarkObjects: 5.330500 ms  DeleteObjects: 0.397300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011989 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.21 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D3DF7BF0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.562 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1563ms)
+		BeginReloadAssembly (153ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1303ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (285ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (794ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (36ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (127ms)
+				ProcessInitializeOnLoadAttributes (426ms)
+				ProcessInitializeOnLoadMethodAttributes (194ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 6.16 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5452 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (1.9 MB). Loaded Objects now: 6163.
+Memory consumption went from 259.8 MB to 257.8 MB.
+Total: 9.525300 ms (FindLiveObjects: 0.482800 ms CreateObjectMapping: 0.539200 ms MarkObjects: 8.033200 ms  DeleteObjects: 0.468900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015863 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.24 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D3F40B00)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.563 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1564ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1325ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (307ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (62ms)
+			SetupLoadedEditorAssemblies (790ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (39ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (126ms)
+				ProcessInitializeOnLoadAttributes (426ms)
+				ProcessInitializeOnLoadMethodAttributes (188ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.06 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5452 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (1.9 MB). Loaded Objects now: 6178.
+Memory consumption went from 259.8 MB to 257.9 MB.
+Total: 6.149700 ms (FindLiveObjects: 0.404100 ms CreateObjectMapping: 0.327900 ms MarkObjects: 4.963000 ms  DeleteObjects: 0.453500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012139 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.28 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D5762730)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.614 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1615ms)
+		BeginReloadAssembly (142ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1370ms)
+			LoadAssemblies (103ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (273ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (58ms)
+			SetupLoadedEditorAssemblies (860ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (36ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (121ms)
+				ProcessInitializeOnLoadAttributes (485ms)
+				ProcessInitializeOnLoadMethodAttributes (207ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.88 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5452 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (1.9 MB). Loaded Objects now: 6193.
+Memory consumption went from 259.8 MB to 257.9 MB.
+Total: 7.225600 ms (FindLiveObjects: 0.394100 ms CreateObjectMapping: 0.335100 ms MarkObjects: 6.064800 ms  DeleteObjects: 0.430600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 12297.299635 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/GunA.png
+  artifactKey: Guid(8a9329665989cb046a5beccbdbd0328b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/GunA.png using Guid(8a9329665989cb046a5beccbdbd0328b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c8576c335b8245adefb74fbb6bb6623') in 0.141526 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Idle_2.png
+  artifactKey: Guid(e4e8751e8bac20a44b22387b7ae343c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Idle_2.png using Guid(e4e8751e8bac20a44b22387b7ae343c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f833270297eb550b25898db5f1c1be6') in 0.028278 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_04.png
+  artifactKey: Guid(b722098d25916ab4f9c5614dad7d2cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_04.png using Guid(b722098d25916ab4f9c5614dad7d2cec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fadd736a2d7ea995037a542a5eda761') in 0.031210 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_02.png
+  artifactKey: Guid(706545bce7d69b746872450ad1217089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_02.png using Guid(706545bce7d69b746872450ad1217089) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91f10a8d6e8cb96d1f760cf24e1cb5d4') in 0.028985 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Run_0.png
+  artifactKey: Guid(8cf9a550156ac5f41a3852d7ae1bc43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Run_0.png using Guid(8cf9a550156ac5f41a3852d7ae1bc43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bc3363450b1b655df51b0f513de0ec0') in 0.024157 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_08.png
+  artifactKey: Guid(b2f383deb97085140a52a7079da0118d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_08.png using Guid(b2f383deb97085140a52a7079da0118d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85b15883202b02fd4166a503ad7c4131') in 0.027788 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_10.png
+  artifactKey: Guid(2d134693799348349a174f93b1f13817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_10.png using Guid(2d134693799348349a174f93b1f13817) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '980e836fbb2899e94f8b1a95802558b4') in 0.027281 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_09.png
+  artifactKey: Guid(82478c549f0c4ef408d1d005bdb06129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_09.png using Guid(82478c549f0c4ef408d1d005bdb06129) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '968502c529d214e594e0a5934a06cacc') in 0.026314 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_05.png
+  artifactKey: Guid(4a1f693435bff574c9854908467ca0a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Magnet_05.png using Guid(4a1f693435bff574c9854908467ca0a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2041b97d6ac0beb2f46c96195356eb70') in 0.029531 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Run_4.png
+  artifactKey: Guid(4378b7db37f4d974db2d660b93699235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/PowerSpriteAnimator/Demo/Sprites/Run_4.png using Guid(4378b7db37f4d974db2d660b93699235) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59d4260cacc31ed38fc5f8891c36cda9') in 0.023946 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012763 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.18 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D48B0D20)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.517 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1518ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1270ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (278ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (773ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (34ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (119ms)
+				ProcessInitializeOnLoadAttributes (406ms)
+				ProcessInitializeOnLoadMethodAttributes (202ms)
+				AfterProcessingInitializeOnLoad (10ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (12ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.19 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5452 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (1.9 MB). Loaded Objects now: 6220.
+Memory consumption went from 263.9 MB to 262.0 MB.
+Total: 7.645900 ms (FindLiveObjects: 0.511700 ms CreateObjectMapping: 0.627000 ms MarkObjects: 6.095800 ms  DeleteObjects: 0.409800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 155.803966 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab
+  artifactKey: Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab using Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb0a35be097036835e7861a8f6950e2e') in 0.237577 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/HeroKnight_Yellow.prefab
+  artifactKey: Guid(3e14bf7b39e2c2940a826eb72e6b8043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/HeroKnight_Yellow.prefab using Guid(3e14bf7b39e2c2940a826eb72e6b8043) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b68ebe873fbbd7d6af2576201ef0c23d') in 0.049095 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/HeroKnight_Green.prefab
+  artifactKey: Guid(2f7eeaf41636b0f4f8ca52ea6858fd36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/HeroKnight_Green.prefab using Guid(2f7eeaf41636b0f4f8ca52ea6858fd36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5f20cc3ae8824b56981ecc265c93e49') in 0.033159 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/SlideDust.prefab
+  artifactKey: Guid(8b8c8cc6774fb074cb9139cc631b108e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/SlideDust.prefab using Guid(8b8c8cc6774fb074cb9139cc631b108e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd728a07ede41bf5a1e7b99fdd2bb059a') in 0.016269 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014556 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.43 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D7F4F390)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.591 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1592ms)
+		BeginReloadAssembly (154ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1326ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (268ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (806ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (42ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (149ms)
+				ProcessInitializeOnLoadAttributes (390ms)
+				ProcessInitializeOnLoadMethodAttributes (213ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.25 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5460 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (1.9 MB). Loaded Objects now: 6283.
+Memory consumption went from 267.1 MB to 265.2 MB.
+Total: 7.373200 ms (FindLiveObjects: 0.490800 ms CreateObjectMapping: 0.406000 ms MarkObjects: 6.029800 ms  DeleteObjects: 0.445400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 91.904720 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/HeroKnight_Green.prefab
+  artifactKey: Guid(2f7eeaf41636b0f4f8ca52ea6858fd36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/HeroKnight_Green.prefab using Guid(2f7eeaf41636b0f4f8ca52ea6858fd36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f970577c7ff23b4394a6c7670098e3f3') in 0.216843 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/HeroKnight.prefab
+  artifactKey: Guid(a4b4a6d32bcb19248a754d6602ffc7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/HeroKnight.prefab using Guid(a4b4a6d32bcb19248a754d6602ffc7e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e3b957e7fefa0c38a1b4c859c251878e') in 0.030216 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/SlideDust.prefab
+  artifactKey: Guid(8b8c8cc6774fb074cb9139cc631b108e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/SlideDust.prefab using Guid(8b8c8cc6774fb074cb9139cc631b108e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '834514dca03cfad5a22be2bfd5d862c9') in 0.013021 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.696867 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/Demo.unity
+  artifactKey: Guid(f9932cc447c2c0b489f7fe04352db427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/Demo.unity using Guid(f9932cc447c2c0b489f7fe04352db427) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d447c52effb03f8752173f5861405f0') in 0.005833 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.015874 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 2.04 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D7E795C0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.698 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1698ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1440ms)
+			LoadAssemblies (109ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (381ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (785ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (48ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (128ms)
+				ProcessInitializeOnLoadAttributes (394ms)
+				ProcessInitializeOnLoadMethodAttributes (204ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 8.14 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5460 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (1.9 MB). Loaded Objects now: 6339.
+Memory consumption went from 267.2 MB to 265.2 MB.
+Total: 6.864200 ms (FindLiveObjects: 0.474700 ms CreateObjectMapping: 0.456400 ms MarkObjects: 5.505400 ms  DeleteObjects: 0.426500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 63.669793 seconds.
+  path: Assets/Plugins/Kenney/PNG/arrowBeige_left.png
+  artifactKey: Guid(476c479641af2474cb7a7111a47f06db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Kenney/PNG/arrowBeige_left.png using Guid(476c479641af2474cb7a7111a47f06db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7b9a19efe5470766e076141be5eefa2') in 0.101641 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Plugins/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot@back.FBX
+  artifactKey: Guid(a13fed205b1fa3942abfab7ba21463ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/AstarPathfindingProject/ExampleScenes/Prefabs/MineBot/mine_bot@back.FBX using Guid(a13fed205b1fa3942abfab7ba21463ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d94ae691c2cbedd7601a8ff00f7f2d') in 0.267790 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Tilemap/Plains_Asset_Pack/Tiles/back_tiles_3.asset
+  artifactKey: Guid(4ed1029fc1eb2fa4db2f71d80507f23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Tilemap/Plains_Asset_Pack/Tiles/back_tiles_3.asset using Guid(4ed1029fc1eb2fa4db2f71d80507f23c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f44907c864d651c45c4ce4a11ef34c0d') in 0.021438 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Plugins/Kenney/PNG/barBlue_horizontalLeft.png
+  artifactKey: Guid(ce5d5163ff9638c448569ab8650c3d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Kenney/PNG/barBlue_horizontalLeft.png using Guid(ce5d5163ff9638c448569ab8650c3d6c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b722cb6e0f596f86c48f160fd7a545a6') in 0.019311 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Plugins/Kenney/PNG/barBlue_verticalMid.png
+  artifactKey: Guid(d06a29bd71526a84990cde2994efab53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Kenney/PNG/barBlue_verticalMid.png using Guid(d06a29bd71526a84990cde2994efab53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b295497fb20a79d1e19206336e078f56') in 0.020136 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Plugins/Kenney/PNG/barBlue_horizontalRight.png
+  artifactKey: Guid(4598406a43fe8ea4cbb6603605b625d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Kenney/PNG/barBlue_horizontalRight.png using Guid(4598406a43fe8ea4cbb6603605b625d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e64fbac01d02bce06ff69d828eabf380') in 0.020367 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Plugins/Kenney/PNG/buttonSquare_blue.png
+  artifactKey: Guid(1a70fc918daa1fe46a43ffee7343c3c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Kenney/PNG/buttonSquare_blue.png using Guid(1a70fc918daa1fe46a43ffee7343c3c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb920daf6836cf4502cfb0122a3b4d20') in 0.022390 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Plugins/Kenney/PNG/cursorGauntlet_blue.png
+  artifactKey: Guid(097f469a3cfee2b4eb47b97b43532da6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Kenney/PNG/cursorGauntlet_blue.png using Guid(097f469a3cfee2b4eb47b97b43532da6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99723891ff91207104ba129e7941a712') in 0.022417 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Plugins/Kenney/PNG/cursorHand_blue.png
+  artifactKey: Guid(a8629b2ac2dfd7f4dad7d62436f30750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Kenney/PNG/cursorHand_blue.png using Guid(a8629b2ac2dfd7f4dad7d62436f30750) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '351874fb02ca4dc16f63c2e2118bf16c') in 0.019701 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Plugins/Kenney/PNG/buttonRound_blue.png
+  artifactKey: Guid(6921edc56da64a149bc4ca79cc237b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Plugins/Kenney/PNG/buttonRound_blue.png using Guid(6921edc56da64a149bc4ca79cc237b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '720ef2afe8e92e9a505a3a559f9f2efc') in 0.023818 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.170158 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Sprites/HeroKnight_DeathNoBlood.png
+  artifactKey: Guid(432e48af0c833ad4587d222b812b844f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Sprites/HeroKnight_DeathNoBlood.png using Guid(432e48af0c833ad4587d222b812b844f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3c446a4a9a727c8984d3fd9cd6908bf') in 0.053927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 56.586851 seconds.
+  path: Assets/Scenes/Scene1.unity
+  artifactKey: Guid(8639d7fdb2b66884b90f02f30eeaf69e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Scene1.unity using Guid(8639d7fdb2b66884b90f02f30eeaf69e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f332f93cc249c2d32fb4d059d4dbd65') in 0.005031 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012417 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.34 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D7656880)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.636 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1637ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (13ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1386ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (294ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (810ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (38ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (445ms)
+				ProcessInitializeOnLoadMethodAttributes (187ms)
+				AfterProcessingInitializeOnLoad (13ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.04 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5460 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (1.9 MB). Loaded Objects now: 6417.
+Memory consumption went from 267.5 MB to 265.6 MB.
+Total: 6.348700 ms (FindLiveObjects: 0.411400 ms CreateObjectMapping: 0.347400 ms MarkObjects: 5.162700 ms  DeleteObjects: 0.426100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 171.352523 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Decal.mat
+  artifactKey: Guid(31d0dcc6f2dd4e4408d18036a2c93862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/Decal.mat using Guid(31d0dcc6f2dd4e4408d18036a2c93862) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5010482b448b5eb1a576d37cfa0bb8bb') in 0.230340 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingOcclusion.mat
+  artifactKey: Guid(b51db210fe78df745a372851b3db949e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpatialMappingOcclusion.mat using Guid(b51db210fe78df745a372851b3db949e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '77fef91ee518fac99356ecb94532f68c') in 0.019479 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat
+  artifactKey: Guid(594ea882c5a793440b60ff72d896021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/TerrainLit.mat using Guid(594ea882c5a793440b60ff72d896021e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a04d33035f280959a5e42c847ba83c76') in 0.021959 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat
+  artifactKey: Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SimpleLit.mat using Guid(6a1143ee683302f4aa628c052723efc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0dad739d40e8d13de5b0628e57e26c81') in 0.029670 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000041 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat
+  artifactKey: Guid(15d0c3709176029428a0da2f8cecf0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Runtime/Materials/SpriteMask-Default.mat using Guid(15d0c3709176029428a0da2f8cecf0b5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db280d785a464124c9143718fad76126') in 0.015700 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 58.271376 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(965da072f24d2ac4d80820066b1f037f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(965da072f24d2ac4d80820066b1f037f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '42e18f03e5086bda1925e49c8def11f3') in 0.102091 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016494 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.19 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D2FF02B0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.608 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1609ms)
+		BeginReloadAssembly (163ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (11ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (52ms)
+		EndReloadAssembly (1343ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (273ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (820ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (120ms)
+				ProcessInitializeOnLoadAttributes (444ms)
+				ProcessInitializeOnLoadMethodAttributes (204ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.49 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5459 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 74 unused Assets / (1.6 MB). Loaded Objects now: 6508.
+Memory consumption went from 267.8 MB to 266.2 MB.
+Total: 7.110600 ms (FindLiveObjects: 0.419500 ms CreateObjectMapping: 0.339400 ms MarkObjects: 5.956900 ms  DeleteObjects: 0.394100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 241.477218 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(965da072f24d2ac4d80820066b1f037f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(965da072f24d2ac4d80820066b1f037f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'aee2d8980f37acfb7dc10fa028989479') in 0.236316 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.011805 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 2.22 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D747D410)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.638 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1639ms)
+		BeginReloadAssembly (145ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (47ms)
+		EndReloadAssembly (1389ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (261ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (68ms)
+			SetupLoadedEditorAssemblies (864ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (34ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (492ms)
+				ProcessInitializeOnLoadMethodAttributes (201ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 7.02 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 76 unused Assets / (1.6 MB). Loaded Objects now: 6564.
+Memory consumption went from 267.7 MB to 266.1 MB.
+Total: 9.100800 ms (FindLiveObjects: 0.680300 ms CreateObjectMapping: 0.581500 ms MarkObjects: 7.538200 ms  DeleteObjects: 0.299500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 58.843652 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab
+  artifactKey: Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab using Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96ee46118b9e7b8e7537f99962d0dc87') in 0.181723 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.754333 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab
+  artifactKey: Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab using Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5a55ddeb9d25032764288fc61588cc1') in 0.013127 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.019359 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab
+  artifactKey: Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab using Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09da2d89068bd7b125ec165446365a6e') in 0.014203 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.776594 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab
+  artifactKey: Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab using Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '95ce7cac0ce140f5859e1c7c363222f4') in 0.019858 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 27.594879 seconds.
+  path: Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab
+  artifactKey: Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Hero Knight - Pixel Art/Demo/BlockFlash.prefab using Guid(803b96fa8ebd5a749bdf32bd0e553139) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e21bd993da045a0c40620b1054834bc5') in 0.011794 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012212 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.36 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D4CAAAC0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.596 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1597ms)
+		BeginReloadAssembly (147ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (1336ms)
+			LoadAssemblies (102ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (265ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (60ms)
+			SetupLoadedEditorAssemblies (815ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (36ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (140ms)
+				ProcessInitializeOnLoadAttributes (427ms)
+				ProcessInitializeOnLoadMethodAttributes (200ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (17ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 6.92 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 73 unused Assets / (1.6 MB). Loaded Objects now: 6620.
+Memory consumption went from 267.8 MB to 266.2 MB.
+Total: 7.126600 ms (FindLiveObjects: 0.649100 ms CreateObjectMapping: 0.389300 ms MarkObjects: 5.836600 ms  DeleteObjects: 0.250500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 108.900880 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(965da072f24d2ac4d80820066b1f037f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(965da072f24d2ac4d80820066b1f037f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdb3cf9adb538bcef62b0da0127ec2e0') in 0.207613 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012025 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.20 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D3AD8BC0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.553 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1554ms)
+		BeginReloadAssembly (203ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (84ms)
+		EndReloadAssembly (1229ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (254ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (72ms)
+			SetupLoadedEditorAssemblies (708ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (35ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (126ms)
+				ProcessInitializeOnLoadAttributes (369ms)
+				ProcessInitializeOnLoadMethodAttributes (167ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (16ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.26 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 76 unused Assets / (1.6 MB). Loaded Objects now: 6676.
+Memory consumption went from 267.8 MB to 266.2 MB.
+Total: 6.373200 ms (FindLiveObjects: 0.465600 ms CreateObjectMapping: 0.367500 ms MarkObjects: 5.258100 ms  DeleteObjects: 0.281000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013924 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.33 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D1F22750)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.627 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1628ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1389ms)
+			LoadAssemblies (104ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (286ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (69ms)
+			SetupLoadedEditorAssemblies (808ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (44ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (167ms)
+				ProcessInitializeOnLoadAttributes (390ms)
+				ProcessInitializeOnLoadMethodAttributes (196ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (19ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.51 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (1.6 MB). Loaded Objects now: 6691.
+Memory consumption went from 267.7 MB to 266.1 MB.
+Total: 6.932400 ms (FindLiveObjects: 0.458900 ms CreateObjectMapping: 0.340400 ms MarkObjects: 5.804200 ms  DeleteObjects: 0.327900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.016300 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.20 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D59AA6A0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.571 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1572ms)
+		BeginReloadAssembly (160ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (10ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (51ms)
+		EndReloadAssembly (1310ms)
+			LoadAssemblies (94ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (278ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (77ms)
+			SetupLoadedEditorAssemblies (747ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (52ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (125ms)
+				ProcessInitializeOnLoadAttributes (371ms)
+				ProcessInitializeOnLoadMethodAttributes (189ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 7.32 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (1.6 MB). Loaded Objects now: 6706.
+Memory consumption went from 267.7 MB to 266.1 MB.
+Total: 7.759300 ms (FindLiveObjects: 0.501400 ms CreateObjectMapping: 0.377900 ms MarkObjects: 6.633700 ms  DeleteObjects: 0.244900 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012398 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.31 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D7A79260)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.550 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1551ms)
+		BeginReloadAssembly (144ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (44ms)
+		EndReloadAssembly (1307ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (275ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (64ms)
+			SetupLoadedEditorAssemblies (775ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (39ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (127ms)
+				ProcessInitializeOnLoadAttributes (400ms)
+				ProcessInitializeOnLoadMethodAttributes (198ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 7.93 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (1.6 MB). Loaded Objects now: 6721.
+Memory consumption went from 267.8 MB to 266.2 MB.
+Total: 6.860200 ms (FindLiveObjects: 0.512700 ms CreateObjectMapping: 0.398800 ms MarkObjects: 5.699300 ms  DeleteObjects: 0.248300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 408.002773 seconds.
+  path: Assets/Animations/Visual.controller
+  artifactKey: Guid(1d174b79c552f7d4f87f90afce853d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Visual.controller using Guid(1d174b79c552f7d4f87f90afce853d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b211d8f1fe57bd37c83a49a3232c7034') in 0.028858 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012564 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.30 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D7A57060)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.578 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1579ms)
+		BeginReloadAssembly (153ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1322ms)
+			LoadAssemblies (101ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (256ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (798ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (39ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (122ms)
+				ProcessInitializeOnLoadAttributes (386ms)
+				ProcessInitializeOnLoadMethodAttributes (240ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 4.98 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (1.6 MB). Loaded Objects now: 6736.
+Memory consumption went from 267.8 MB to 266.2 MB.
+Total: 6.011700 ms (FindLiveObjects: 0.445800 ms CreateObjectMapping: 0.349400 ms MarkObjects: 4.967100 ms  DeleteObjects: 0.248300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013257 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.24 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D3F269D0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.585 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1586ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (48ms)
+		EndReloadAssembly (1337ms)
+			LoadAssemblies (95ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (302ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (61ms)
+			SetupLoadedEditorAssemblies (785ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (33ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (129ms)
+				ProcessInitializeOnLoadAttributes (368ms)
+				ProcessInitializeOnLoadMethodAttributes (243ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (14ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 6.32 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (1.6 MB). Loaded Objects now: 6751.
+Memory consumption went from 267.8 MB to 266.2 MB.
+Total: 6.715000 ms (FindLiveObjects: 0.508900 ms CreateObjectMapping: 0.365100 ms MarkObjects: 5.591800 ms  DeleteObjects: 0.247800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.014541 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.64 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D57EF900)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.603 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1604ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (40ms)
+		EndReloadAssembly (1364ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (294ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (65ms)
+			SetupLoadedEditorAssemblies (804ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (127ms)
+				ProcessInitializeOnLoadAttributes (376ms)
+				ProcessInitializeOnLoadMethodAttributes (248ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (20ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.19 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (1.6 MB). Loaded Objects now: 6766.
+Memory consumption went from 267.8 MB to 266.2 MB.
+Total: 7.040700 ms (FindLiveObjects: 0.473000 ms CreateObjectMapping: 0.375300 ms MarkObjects: 5.923400 ms  DeleteObjects: 0.267800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.013130 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.22 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D7AADAA0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.627 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1627ms)
+		BeginReloadAssembly (151ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (53ms)
+		EndReloadAssembly (1358ms)
+			LoadAssemblies (102ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (297ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (63ms)
+			SetupLoadedEditorAssemblies (788ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (38ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (135ms)
+				ProcessInitializeOnLoadAttributes (400ms)
+				ProcessInitializeOnLoadMethodAttributes (203ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (21ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 5.55 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (1.6 MB). Loaded Objects now: 6781.
+Memory consumption went from 267.9 MB to 266.3 MB.
+Total: 7.045000 ms (FindLiveObjects: 0.523200 ms CreateObjectMapping: 0.395300 ms MarkObjects: 5.814300 ms  DeleteObjects: 0.310600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012477 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 1.83 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 00000216D6A53410)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  1.626 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1627ms)
+		BeginReloadAssembly (138ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1383ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (269ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (75ms)
+			SetupLoadedEditorAssemblies (844ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (40ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (137ms)
+				ProcessInitializeOnLoadAttributes (403ms)
+				ProcessInitializeOnLoadMethodAttributes (253ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (15ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 6.16 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 5458 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 71 unused Assets / (1.6 MB). Loaded Objects now: 6796.
+Memory consumption went from 267.9 MB to 266.3 MB.
+Total: 6.828400 ms (FindLiveObjects: 0.479200 ms CreateObjectMapping: 0.375100 ms MarkObjects: 5.714900 ms  DeleteObjects: 0.258300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 586.818304 seconds.
+  path: Assets/Animations/Visual.controller
+  artifactKey: Guid(1d174b79c552f7d4f87f90afce853d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Animations/Visual.controller using Guid(1d174b79c552f7d4f87f90afce853d27) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '088bef9933bc692b4c3a2cbdcbdacf7b') in 0.037570 seconds 

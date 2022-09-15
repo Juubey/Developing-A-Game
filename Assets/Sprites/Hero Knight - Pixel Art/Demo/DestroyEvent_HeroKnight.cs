@@ -10,4 +10,8 @@ public class DestroyEvent_HeroKnight : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    private void OnDestroy()
+    {
+        Destroy(gameObject);
+    }
 }
