@@ -8,7 +8,6 @@ public class Weapon : MonoBehaviour
     public Transform firePoint;
     public float hitRadius = 0.5f;
     public GameObject bulletPrefab;
-    private PlayerCombat enemyLayers;
     Rigidbody2D rb;
     public GameObject impactEffect;
     public GameObject Spear;

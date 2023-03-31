@@ -28,6 +28,7 @@ public class DataPersistenceManager : MonoBehaviour
     private Coroutine autoSaveCoroutine;
 
     public static DataPersistenceManager instance { get; private set; }
+    public LevelMapSO data;
 
     private void Awake() 
     {
@@ -53,6 +54,7 @@ public class DataPersistenceManager : MonoBehaviour
     private void OnEnable() 
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
+        LevelFlowManager.flowData = data;
     }
 
     private void OnDisable() 

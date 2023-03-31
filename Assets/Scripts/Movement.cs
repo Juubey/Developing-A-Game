@@ -23,6 +23,11 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     [HideInInspector] public Rigidbody2D rb;
     public AfterImage afterImage;
     public PlayerRunData Data;
+    public AudioSource footstepSFX;
+    public AudioClip LandingAudioClip;
+    public AudioClip[] FootstepAudioClips;
+    [Range(0, 1)] public float FootstepAudioVolume = 0.5f;
+
     [Space]
     public int side = 1;
     #endregion
@@ -47,6 +52,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     public bool wallJumped;
     public bool wallSlide;
     public bool isDashing;
+    public bool isMoving = false;
     #endregion
 
     #region Public ParticleSystem
@@ -80,6 +86,8 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     [SerializeField] private AttributesScriptableObject playerAttributesSO;
     #endregion
 
+   
+
     #region private functions
     /// <summary>
     /// The start method retrives the player components, 
@@ -91,6 +99,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<AnimationScript>();
+        footstepSFX = GetComponent<AudioSource>();
     }
     private void Awake()
     {
@@ -113,7 +122,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     /// modifiers which determine how the player moves.
     /// BetterJumping class is referenced. 
     /// </summary>
-    void Update()
+    void FixedUpdate()
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
@@ -129,6 +138,15 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         Walk(dir);
         anim.SetHorizontalMovement(x, y, rb.velocity.y);
 
+    }
+
+    void Update()
+    {
+        float x = Input.GetAxis("Horizontal");
+        float y = Input.GetAxis("Vertical");
+        float xRaw = Input.GetAxisRaw("Horizontal");
+        float yRaw = Input.GetAxisRaw("Vertical");
+
         jumpTimer -= Time.deltaTime;
         groundedTimer -= Time.deltaTime;
 
@@ -142,7 +160,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
 
         float vel = rb.velocity.x;
 
-        if ((rb.velocity.x < -14 || rb.velocity.x > 14) && !isDashing)
+        if ((rb.velocity.x < -20 || rb.velocity.x > 20) && !isDashing)
         {
             afterImage.makeAfterImage = true;
         }
@@ -285,9 +303,20 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         
         if(DialogueManager.GetInstance().dialogueIsPlaying)
         {
-            vel = 0;
             canMove = false;
         }
+
+        if (rb.velocity.x != 0 && rb.velocity.y == 0)
+            isMoving = true;
+        else
+            isMoving = false;
+        if (isMoving)
+        {
+            if (!footstepSFX.isPlaying)
+                footstepSFX.Play();
+        }
+        else
+            footstepSFX.Pause();
 
     }
 
@@ -434,6 +463,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
 
             //Convert this to a vector and apply to rigidbody
             rb.AddForce(movement * Vector2.right, ForceMode2D.Force);
+            
         }
         else
         {
@@ -651,5 +681,24 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     public void RegisterSubmitPressed()
     {
         submitPressed = false;
+    }
+    private void OnFootstep(AnimationEvent animationEvent)
+    {
+        if (animationEvent.animatorClipInfo.weight > 0.5f)
+        {
+            if (FootstepAudioClips.Length > 0)
+            {
+                var index = Random.Range(0, FootstepAudioClips.Length);
+                AudioSource.PlayClipAtPoint(FootstepAudioClips[index], transform.localPosition, FootstepAudioVolume);
+            }
+        }
+    }
+
+    private void OnLand(AnimationEvent animationEvent)
+    {
+        if (animationEvent.animatorClipInfo.weight > 0.5f)
+        {
+            AudioSource.PlayClipAtPoint(LandingAudioClip, transform.localPosition, FootstepAudioVolume);
+        }
     }
 }

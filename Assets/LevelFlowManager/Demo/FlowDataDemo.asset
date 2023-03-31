@@ -1,0 +1,48 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47ba7bbf0a2b74f48a6cea1eebb689a9, type: 3}
+  m_Name: FlowDataDemo
+  m_EditorClassIdentifier: 
+  mainSceneName: 
+  startNodeDatas: []
+  levelNodeDatas:
+  - guid: 26f891fa-4c5b-427c-a608-b375db59ad5d
+    position: {x: 874.6666, y: 1.7777786}
+    portSets:
+    - setGuid: 223ecb0c-6770-4b8f-8c52-6c906f54ec96
+      localInGuid: 41a27d15-5c6a-4c68-9607-d05c2c07af28
+      localOutGuid: 10ecb191-1a45-434e-a859-459a3675c502
+      pointObjectName: Blue Point
+      nodeGuid: 26f891fa-4c5b-427c-a608-b375db59ad5d
+      position: {x: 0, y: 0}
+    loadType: 1
+    asyncType: 0
+    scenePath: Assets/Scenes/TestScene2.unity
+    sceneAssestGuid: 7802461ecb9647f42a1e248568a5f2e7
+  - guid: f090a998-7377-440f-b029-cd2e83f60840
+    position: {x: 874.6666, y: -436.8889}
+    portSets:
+    - setGuid: f2ece08d-1f68-4b41-896d-a92d99dbbad9
+      localInGuid: 9fc1ce21-fb79-426c-b611-8cf623363d3f
+      localOutGuid: a8b6d7a0-e423-4787-8840-c48fd909a24b
+      pointObjectName: Red Point
+      nodeGuid: f090a998-7377-440f-b029-cd2e83f60840
+      position: {x: 0, y: 0}
+    loadType: 1
+    asyncType: 0
+    scenePath: Assets/Scenes/TestScene1.unity
+    sceneAssestGuid: 8639d7fdb2b66884b90f02f30eeaf69e
+  linkDatas:
+  - inPortGuid: 9fc1ce21-fb79-426c-b611-8cf623363d3f
+    outPortGuid: 10ecb191-1a45-434e-a859-459a3675c502
+  - inPortGuid: 41a27d15-5c6a-4c68-9607-d05c2c07af28
+    outPortGuid: a8b6d7a0-e423-4787-8840-c48fd909a24b

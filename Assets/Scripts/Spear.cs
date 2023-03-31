@@ -34,7 +34,7 @@ public class Spear : MonoBehaviour
     public float attackRate = 2f;
     float nextAttackTime = 0f;
     public float hitRadius = 0.5f;
-    private PlayerCombat enemyLayers;
+    
     public GameObject impactEffect;
     public int damage = 30;
     public Transform firePoint;

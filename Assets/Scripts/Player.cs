@@ -12,8 +12,11 @@ public class Player : MonoBehaviour
     public int health = 100;
     public int level = 1;
     public Animator transition;
+    public SpriteRenderer SpriteRend;
+    public Material FlashMaterial;
+    public Material OGMaterial;
 
-     public HealthBar healthBar;
+    public HealthBar healthBar;
      public Movement Movement;
 
     [Space]
@@ -46,6 +49,10 @@ public class Player : MonoBehaviour
         isAlive = true;
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+
+        SpriteRend = gameObject.GetComponentInChildren<SpriteRenderer>();
+        OGMaterial = SpriteRend.material;
+
     }
 
     // Update is called once per frame
@@ -65,6 +72,7 @@ public class Player : MonoBehaviour
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth);
+        StartCoroutine(DamageFlash());
     }
     public void TakeHeal(int heal)
     {
@@ -83,5 +91,11 @@ public class Player : MonoBehaviour
     FindObjectOfType<GameManager>().EndGame();
     yield return new WaitForSeconds(time);
 
+    }
+    IEnumerator DamageFlash()
+    {
+        SpriteRend.material = FlashMaterial;
+        yield return new WaitForSeconds(.25f);
+        SpriteRend.material = OGMaterial;
     }
 }

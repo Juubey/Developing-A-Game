@@ -8,7 +8,7 @@ public class AnimationScript : MonoBehaviour
 
     private Animator anim;
     private Movement move;
-    private  PlayerCombat atk;
+    
     private Collision coll;
     [HideInInspector]
     public SpriteRenderer sr;
@@ -19,7 +19,7 @@ public class AnimationScript : MonoBehaviour
         coll = GetComponentInParent<Collision>();
         move = GetComponentInParent<Movement>();
         sr = GetComponent<SpriteRenderer>();
-        atk = GetComponentInParent<PlayerCombat>();
+
         dustParticle.Stop(true);
     }
 
@@ -32,7 +32,7 @@ public class AnimationScript : MonoBehaviour
         anim.SetBool("wallSlide", move.wallSlide);
         anim.SetBool("canMove", move.canMove);
         anim.SetBool("isDashing", move.isDashing);
-        //anim.SetBool("attack", atk.attack);
+
     }
 
     public void SetHorizontalMovement(float x,float y, float yVel)

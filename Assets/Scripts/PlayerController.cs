@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
     [Space]
     [Header("Damage Calc")]
     public float hitRadius = 0.5f;
-    private PlayerCombat enemyLayers;
+    
     public GameObject impactEffect;
     public int damage = 30;
     public Transform firePoint;

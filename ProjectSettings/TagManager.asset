@@ -52,6 +52,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Agent
+    uniqueID: 2527903071
+    locked: 0
+  - name: SeeThruObject
+    uniqueID: 1357075271
+    locked: 0
   - name: Cursor
     uniqueID: 202463363
     locked: 0

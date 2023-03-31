@@ -3,7 +3,6 @@
 public class TomeLogic : MonoBehaviour
 {
     [SerializeField] private Tome tome;
-    [SerializeField] private PlayerCombat playerCombat;
     private State state;
     private Rigidbody2D t_rigidb2d;
     private TrailRenderer trailRenderer;
@@ -77,7 +76,6 @@ public class TomeLogic : MonoBehaviour
         t_rigidb2d.bodyType = RigidbodyType2D.Dynamic;
         //TrailRenderer.enabled = true;
         state = State.thrown;
-        playerCombat.Attack();
     }
 
     public void Recall()
