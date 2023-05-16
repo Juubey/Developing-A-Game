@@ -19,7 +19,23 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "460962bc02822fd2a8083f48570bf8a07abbfd52"
+      "hash": "cfcde2d6cc694e631290a7110c9bf26ce2452f66"
+    },
+    "com.fastscriptreload": {
+      "version": "https://github.com/handzlikchris/FastScriptReload.git?path=Assets",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "561be60ec48f04fb2c75abcbd36559bf27da37ef"
+    },
+    "com.harumak.urpgrabpass": {
+      "version": "https://github.com/Haruma-K/URPGrabPass.git?path=/Assets/URPGrabPass",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.render-pipelines.universal": "10.2.0"
+      },
+      "hash": "9308f1e3f5f0e12d18e35a07fb1843dd09fd5760"
     },
     "com.stoneshelter.guid": {
       "version": "https://github.com/stonesheltergames/Unity-GUID.git",

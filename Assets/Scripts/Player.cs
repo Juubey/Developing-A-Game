@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using SoulSpliter;
 
-public class Player : MonoBehaviour
+public class Player : MonoBehaviour, IDamageable
 {
 
     public int maxHealth = 100;
@@ -17,7 +18,10 @@ public class Player : MonoBehaviour
     public Material OGMaterial;
 
     public HealthBar healthBar;
-     public Movement Movement;
+    public Movement Movement;
+    public CameraShaker cameraShaker;
+    public TimeFreezer timeFreezer;
+
 
     [Space]
     [Header("Booleans")]
@@ -62,6 +66,10 @@ public class Player : MonoBehaviour
         {
             TakeDamage(20);
         }
+        if (Keyboard.current.jKey.wasPressedThisFrame)
+        {
+            TakeHeal(20);
+        }
         if (currentHealth == 0)
         {
             StartCoroutine(DeathDelay(0.1f));
@@ -73,6 +81,9 @@ public class Player : MonoBehaviour
 
         healthBar.SetHealth(currentHealth);
         StartCoroutine(DamageFlash());
+        //gameObject.GetComponent<TimeFreezer>().FreezeTime(10.0f);
+        gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
+        gameObject.GetComponent<CameraShaker>().BasicShake(5.0f, 5.0f);
     }
     public void TakeHeal(int heal)
     {
@@ -87,8 +98,8 @@ public class Player : MonoBehaviour
     Movement.speed = 0;
     Movement.canMove = false;
     Movement.jumpForce = 0;
-    transition.SetTrigger("Start");
-    FindObjectOfType<GameManager>().EndGame();
+    //transition.SetTrigger("Start");
+    //FindObjectOfType<GameManager>().EndGame();
     yield return new WaitForSeconds(time);
 
     }

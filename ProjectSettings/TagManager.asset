@@ -61,3 +61,6 @@ TagManager:
   - name: Cursor
     uniqueID: 202463363
     locked: 0
+  - name: CameraSortingLayer
+    uniqueID: 4244820937
+    locked: 0

@@ -59,7 +59,7 @@ MonoBehaviour:
     y: 0
     width: 300
     height: 30
-  m_Visualization: 0
+  m_Visualization: 2
   m_ActionReference: {fileID: 0}
   m_ActionName: 
   m_ShowControlName: 0

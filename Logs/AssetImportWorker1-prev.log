@@ -15,7 +15,7 @@ C:/Users/rasen/OneDrive/Desktop/Unity Projects/Developing-A-Game
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-49448
+51848
 Successfully changed project path to: C:/Users/rasen/OneDrive/Desktop/Unity Projects/Developing-A-Game
 C:/Users/rasen/OneDrive/Desktop/Unity Projects/Developing-A-Game
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ C:/Users/rasen/OneDrive/Desktop/Unity Projects/Developing-A-Game
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 165.60 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 325.64 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.0f1 (6eacc8284459)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/Resources/UnitySubsystems
@@ -58,54 +58,53 @@ Direct3D:
     Renderer: NVIDIA GeForce RTX 2070 Super with Max-Q Design (ID=0x1e91)
     Vendor:   NVIDIA
     VRAM:     8003 MB
-    Driver:   31.0.15.2852
+    Driver:   31.0.15.3161
 Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56196
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56508
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.0f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.014953 seconds.
+Registered in 0.020795 seconds.
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
-[usbmuxd] Send listen message
 Native extension for iOS target not found
 Native extension for Android target not found
 MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
-Refreshing native plugins compatible for Editor in 191.57 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 226.74 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.179 seconds
+- Completed reload, in  1.391 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1179ms)
-		BeginReloadAssembly (91ms)
+	ReloadAssembly (1392ms)
+		BeginReloadAssembly (165ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (932ms)
-			LoadAssemblies (89ms)
+		EndReloadAssembly (1024ms)
+			LoadAssemblies (164ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (141ms)
+			SetupTypeCache (203ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (32ms)
-			SetupLoadedEditorAssemblies (694ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (680ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (40ms)
+				InitializePlatformSupportModulesInManaged (58ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (192ms)
-				BeforeProcessingInitializeOnLoad (3ms)
-				ProcessInitializeOnLoadAttributes (411ms)
-				ProcessInitializeOnLoadMethodAttributes (49ms)
+				RefreshPlugins (227ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (247ms)
+				ProcessInitializeOnLoadMethodAttributes (145ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
@@ -117,16 +116,59 @@ MissingMethodException: Method not found: void UnityEditor.PlayerSettings.Regist
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
 Registering precompiled user dll's ...
-Registered in 0.018211 seconds.
+Registered in 0.041538 seconds.
 Begin MonoManager ReloadAssembly
+Script error: OnTriggerExit
+This message parameter has to be of type: Collider
+The message will be ignored.
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
-Refreshing native plugins compatible for Editor in 266.28 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 306.69 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+FSR: Fast Script Reload - asset auto refresh enabled - full reload will be triggered unless editor preference adjusted - see documentation for more details.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogInternal (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogWarning (object)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:EnsureUserAwareOfAutoRefresh () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:912)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:InitCommon () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:888)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:.cctor () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:881)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs Line: 912)
+
+System.TypeInitializationException: The type initializer for 'FastScriptReload.Editor.Compilation.DynamicCompilationBase' threw an exception. ---> System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer.InitCommon () [0x0000d] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:890 
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer..cctor () [0x0004c] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:881 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
 GameView is null!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
@@ -140,36 +182,36 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 (Filename: Assets/Scripts/GameManager.cs Line: 49)
 
 Loading user settings - Package Manager log level set to [3]
-[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 0000028E72D8BE90)
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 000002B7D6E43C50)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.799 seconds
+- Completed reload, in 14.158 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2800ms)
-		BeginReloadAssembly (280ms)
+	ReloadAssembly (14159ms)
+		BeginReloadAssembly (187ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (80ms)
-		EndReloadAssembly (2333ms)
-			LoadAssemblies (204ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (13751ms)
+			LoadAssemblies (300ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (364ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (103ms)
-			SetupLoadedEditorAssemblies (1675ms)
+			SetupTypeCache (720ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (204ms)
+			SetupLoadedEditorAssemblies (12373ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (37ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (266ms)
-				BeforeProcessingInitializeOnLoad (354ms)
-				ProcessInitializeOnLoadAttributes (767ms)
-				ProcessInitializeOnLoadMethodAttributes (241ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
+				InitializePlatformSupportModulesInManaged (96ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (307ms)
+				BeforeProcessingInitializeOnLoad (558ms)
+				ProcessInitializeOnLoadAttributes (9304ms)
+				ProcessInitializeOnLoadMethodAttributes (2087ms)
+				AfterProcessingInitializeOnLoad (19ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (7ms)
+			AwakeInstancesAfterBackupRestoration (22ms)
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -178,13 +220,13 @@ MissingMethodException: Method not found: void UnityEditor.PlayerSettings.Regist
 
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 1.56 ms, found 8 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.24 seconds
+Refreshing native plugins compatible for Editor in 3.54 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6350 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 104 unused Assets / (1.6 MB). Loaded Objects now: 6844.
-Memory consumption went from 283.2 MB to 281.6 MB.
-Total: 8.969600 ms (FindLiveObjects: 0.600200 ms CreateObjectMapping: 0.639200 ms MarkObjects: 7.462900 ms  DeleteObjects: 0.265100 ms)
+Unloading 6415 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 115 unused Assets / (1.9 MB). Loaded Objects now: 6938.
+Memory consumption went from 287.1 MB to 285.2 MB.
+Total: 12.995500 ms (FindLiveObjects: 0.605400 ms CreateObjectMapping: 0.692000 ms MarkObjects: 11.144900 ms  DeleteObjects: 0.551600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -199,20 +241,14 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 86014.986933 seconds.
-  path: Assets/Scenes/TestScene1.unity
-  artifactKey: Guid(8639d7fdb2b66884b90f02f30eeaf69e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/TestScene1.unity using Guid(8639d7fdb2b66884b90f02f30eeaf69e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '177d0a4ac34b6e3fa7215440384cca0d') in 0.016243 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Scenes/TestScene2.unity
-  artifactKey: Guid(7802461ecb9647f42a1e248568a5f2e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/TestScene2.unity using Guid(7802461ecb9647f42a1e248568a5f2e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7b0912483f98060f1e318558933d3be') in 0.008851 seconds 
+  Time since last request: 2225.063531 seconds.
+  path: Assets/Scripts/RippleEffect/SpriteRipple.shadergraph
+  artifactKey: Guid(b9c11dc47af231144a2f5136a8e63fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/RippleEffect/SpriteRipple.shadergraph using Guid(b9c11dc47af231144a2f5136a8e63fe8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d069128907614599e9148e63358c171') in 0.074384 seconds 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.015659 seconds.
+Registered in 0.030950 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
@@ -220,8 +256,48 @@ Native extension for Android target not found
 MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
-Refreshing native plugins compatible for Editor in 2.62 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 4.61 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+FSR: Fast Script Reload - asset auto refresh enabled - full reload will be triggered unless editor preference adjusted - see documentation for more details.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogInternal (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogWarning (object)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:EnsureUserAwareOfAutoRefresh () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:912)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:InitCommon () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:888)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:.cctor () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:881)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs Line: 912)
+
+System.TypeInitializationException: The type initializer for 'FastScriptReload.Editor.Compilation.DynamicCompilationBase' threw an exception. ---> System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer.InitCommon () [0x0000d] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:890 
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer..cctor () [0x0004c] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:881 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
 GameView is null!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
@@ -234,127 +310,51 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 (Filename: Assets/Scripts/GameManager.cs Line: 49)
 
-[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 0000028E7480DD20)
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 000002B7D3FA21D0)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.273 seconds
+- Completed reload, in  5.450 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2274ms)
-		BeginReloadAssembly (170ms)
+	ReloadAssembly (5451ms)
+		BeginReloadAssembly (458ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
+			DisableScriptedObjects (26ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (52ms)
-		EndReloadAssembly (1993ms)
-			LoadAssemblies (130ms)
+			CreateAndSetChildDomain (148ms)
+		EndReloadAssembly (4685ms)
+			LoadAssemblies (611ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (337ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (72ms)
-			SetupLoadedEditorAssemblies (1372ms)
+			SetupTypeCache (989ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (196ms)
+			SetupLoadedEditorAssemblies (2678ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (52ms)
+				InitializePlatformSupportModulesInManaged (98ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (3ms)
-				BeforeProcessingInitializeOnLoad (165ms)
-				ProcessInitializeOnLoadAttributes (911ms)
-				ProcessInitializeOnLoadMethodAttributes (228ms)
-				AfterProcessingInitializeOnLoad (12ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (10ms)
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
-  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
-
-Refreshing native plugins compatible for Editor in 8.37 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6149 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 77 unused Assets / (1.6 MB). Loaded Objects now: 6860.
-Memory consumption went from 278.1 MB to 276.5 MB.
-Total: 8.568000 ms (FindLiveObjects: 0.510900 ms CreateObjectMapping: 0.488700 ms MarkObjects: 7.324200 ms  DeleteObjects: 0.243100 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.018780 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
-  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
-
-Refreshing native plugins compatible for Editor in 1.61 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-GameView is null!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
-GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/Scripts/GameManager.cs Line: 49)
-
-[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 0000028E73539F70)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.263 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2264ms)
-		BeginReloadAssembly (175ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (9ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (55ms)
-		EndReloadAssembly (1974ms)
-			LoadAssemblies (121ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (393ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (82ms)
-			SetupLoadedEditorAssemblies (1264ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (58ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (271ms)
-				ProcessInitializeOnLoadAttributes (682ms)
-				ProcessInitializeOnLoadMethodAttributes (237ms)
-				AfterProcessingInitializeOnLoad (13ms)
+				RefreshPlugins (5ms)
+				BeforeProcessingInitializeOnLoad (339ms)
+				ProcessInitializeOnLoadAttributes (1789ms)
+				ProcessInitializeOnLoadMethodAttributes (413ms)
+				AfterProcessingInitializeOnLoad (33ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (13ms)
+			AwakeInstancesAfterBackupRestoration (44ms)
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
-Refreshing native plugins compatible for Editor in 6.72 ms, found 8 plugins.
+Script error: OnTriggerExit
+This message parameter has to be of type: Collider
+The message will be ignored.
+Refreshing native plugins compatible for Editor in 24.39 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6149 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 77 unused Assets / (1.6 MB). Loaded Objects now: 6876.
-Memory consumption went from 278.1 MB to 276.5 MB.
-Total: 7.331200 ms (FindLiveObjects: 0.459600 ms CreateObjectMapping: 0.404000 ms MarkObjects: 6.227900 ms  DeleteObjects: 0.238600 ms)
+Unloading 6210 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.9 MB). Loaded Objects now: 6954.
+Memory consumption went from 283.6 MB to 281.7 MB.
+Total: 15.336900 ms (FindLiveObjects: 0.936200 ms CreateObjectMapping: 0.868200 ms MarkObjects: 12.636900 ms  DeleteObjects: 0.893700 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -370,7 +370,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.019464 seconds.
+Registered in 0.028041 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
@@ -378,8 +378,48 @@ Native extension for Android target not found
 MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
-Refreshing native plugins compatible for Editor in 1.50 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 3.44 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+FSR: Fast Script Reload - asset auto refresh enabled - full reload will be triggered unless editor preference adjusted - see documentation for more details.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogInternal (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogWarning (object)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:EnsureUserAwareOfAutoRefresh () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:912)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:InitCommon () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:888)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:.cctor () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:881)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs Line: 912)
+
+System.TypeInitializationException: The type initializer for 'FastScriptReload.Editor.Compilation.DynamicCompilationBase' threw an exception. ---> System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer.InitCommon () [0x0000d] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:890 
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer..cctor () [0x0004c] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:881 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
 GameView is null!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
@@ -392,48 +432,51 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 (Filename: Assets/Scripts/GameManager.cs Line: 49)
 
-[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 0000028E73BA6160)
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 000002B7D6FB0300)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.377 seconds
+- Completed reload, in  5.177 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2378ms)
-		BeginReloadAssembly (172ms)
+	ReloadAssembly (5179ms)
+		BeginReloadAssembly (476ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (20ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (57ms)
-		EndReloadAssembly (2065ms)
-			LoadAssemblies (128ms)
+			CreateAndSetChildDomain (136ms)
+		EndReloadAssembly (4415ms)
+			LoadAssemblies (545ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (412ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (74ms)
-			SetupLoadedEditorAssemblies (1354ms)
+			SetupTypeCache (1141ms)
+			ReleaseScriptCaches (4ms)
+			RebuildScriptCaches (127ms)
+			SetupLoadedEditorAssemblies (2550ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (42ms)
+				InitializePlatformSupportModulesInManaged (76ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (186ms)
-				ProcessInitializeOnLoadAttributes (859ms)
-				ProcessInitializeOnLoadMethodAttributes (254ms)
-				AfterProcessingInitializeOnLoad (11ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (266ms)
+				ProcessInitializeOnLoadAttributes (1819ms)
+				ProcessInitializeOnLoadMethodAttributes (367ms)
+				AfterProcessingInitializeOnLoad (17ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (12ms)
+			AwakeInstancesAfterBackupRestoration (31ms)
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
-Refreshing native plugins compatible for Editor in 7.59 ms, found 8 plugins.
+Script error: OnTriggerExit
+This message parameter has to be of type: Collider
+The message will be ignored.
+Refreshing native plugins compatible for Editor in 20.11 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6149 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 77 unused Assets / (1.6 MB). Loaded Objects now: 6892.
-Memory consumption went from 278.1 MB to 276.5 MB.
-Total: 27.582700 ms (FindLiveObjects: 1.082700 ms CreateObjectMapping: 0.909400 ms MarkObjects: 24.907400 ms  DeleteObjects: 0.681700 ms)
+Unloading 6210 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.9 MB). Loaded Objects now: 6970.
+Memory consumption went from 283.7 MB to 281.7 MB.
+Total: 30.077700 ms (FindLiveObjects: 2.355800 ms CreateObjectMapping: 1.721600 ms MarkObjects: 23.990200 ms  DeleteObjects: 2.007600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -449,7 +492,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.022119 seconds.
+Registered in 0.028568 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
@@ -457,8 +500,48 @@ Native extension for Android target not found
 MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
-Refreshing native plugins compatible for Editor in 1.53 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 3.71 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+FSR: Fast Script Reload - asset auto refresh enabled - full reload will be triggered unless editor preference adjusted - see documentation for more details.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogInternal (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogWarning (object)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:EnsureUserAwareOfAutoRefresh () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:912)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:InitCommon () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:888)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:.cctor () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:881)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs Line: 912)
+
+System.TypeInitializationException: The type initializer for 'FastScriptReload.Editor.Compilation.DynamicCompilationBase' threw an exception. ---> System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer.InitCommon () [0x0000d] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:890 
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer..cctor () [0x0004c] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:881 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
 GameView is null!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
@@ -471,115 +554,36 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 (Filename: Assets/Scripts/GameManager.cs Line: 49)
 
-[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 0000028E74F1D7D0)
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 000002B7D5F9AF30)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.107 seconds
+- Completed reload, in  4.807 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2108ms)
-		BeginReloadAssembly (199ms)
+	ReloadAssembly (4808ms)
+		BeginReloadAssembly (361ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (12ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (66ms)
-		EndReloadAssembly (1760ms)
-			LoadAssemblies (145ms)
+			CreateAndSetChildDomain (91ms)
+		EndReloadAssembly (4238ms)
+			LoadAssemblies (319ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (463ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (73ms)
-			SetupLoadedEditorAssemblies (1004ms)
+			SetupTypeCache (856ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (149ms)
+			SetupLoadedEditorAssemblies (2841ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (42ms)
+				InitializePlatformSupportModulesInManaged (84ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (180ms)
-				ProcessInitializeOnLoadAttributes (569ms)
-				ProcessInitializeOnLoadMethodAttributes (201ms)
-				AfterProcessingInitializeOnLoad (10ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
-  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
-
-Refreshing native plugins compatible for Editor in 11.81 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6150 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 77 unused Assets / (1.6 MB). Loaded Objects now: 6909.
-Memory consumption went from 278.2 MB to 276.6 MB.
-Total: 15.286200 ms (FindLiveObjects: 0.596300 ms CreateObjectMapping: 4.413400 ms MarkObjects: 9.976500 ms  DeleteObjects: 0.298500 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.015368 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
-  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
-
-Refreshing native plugins compatible for Editor in 1.63 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-GameView is null!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
-GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/Scripts/GameManager.cs Line: 49)
-
-[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 0000028E733237A0)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  1.746 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1746ms)
-		BeginReloadAssembly (182ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (10ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (62ms)
-		EndReloadAssembly (1443ms)
-			LoadAssemblies (129ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (297ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (72ms)
-			SetupLoadedEditorAssemblies (883ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (37ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (140ms)
-				ProcessInitializeOnLoadAttributes (509ms)
-				ProcessInitializeOnLoadMethodAttributes (185ms)
-				AfterProcessingInitializeOnLoad (9ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (324ms)
+				ProcessInitializeOnLoadAttributes (1962ms)
+				ProcessInitializeOnLoadMethodAttributes (445ms)
+				AfterProcessingInitializeOnLoad (21ms)
 				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (9ms)
+			AwakeInstancesAfterBackupRestoration (25ms)
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -589,12 +593,12 @@ MissingMethodException: Method not found: void UnityEditor.PlayerSettings.Regist
 Script error: OnTriggerExit
 This message parameter has to be of type: Collider
 The message will be ignored.
-Refreshing native plugins compatible for Editor in 6.09 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 13.13 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6150 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 77 unused Assets / (1.6 MB). Loaded Objects now: 6925.
-Memory consumption went from 278.3 MB to 276.7 MB.
-Total: 7.872500 ms (FindLiveObjects: 0.524400 ms CreateObjectMapping: 0.511200 ms MarkObjects: 6.514200 ms  DeleteObjects: 0.321300 ms)
+Unloading 6210 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.9 MB). Loaded Objects now: 6986.
+Memory consumption went from 283.7 MB to 281.8 MB.
+Total: 10.306400 ms (FindLiveObjects: 0.541300 ms CreateObjectMapping: 0.568100 ms MarkObjects: 8.321200 ms  DeleteObjects: 0.874000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -610,7 +614,7 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.017535 seconds.
+Registered in 0.025536 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
@@ -618,8 +622,48 @@ Native extension for Android target not found
 MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
   at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
 
-Refreshing native plugins compatible for Editor in 1.43 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 4.16 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+FSR: Fast Script Reload - asset auto refresh enabled - full reload will be triggered unless editor preference adjusted - see documentation for more details.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogInternal (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogWarning (object)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:EnsureUserAwareOfAutoRefresh () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:912)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:InitCommon () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:888)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:.cctor () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:881)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs Line: 912)
+
+System.TypeInitializationException: The type initializer for 'FastScriptReload.Editor.Compilation.DynamicCompilationBase' threw an exception. ---> System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer.InitCommon () [0x0000d] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:890 
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer..cctor () [0x0004c] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:881 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
 GameView is null!
 UnityEngine.StackTraceUtility:ExtractStackTrace ()
 UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
@@ -632,118 +676,36 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 (Filename: Assets/Scripts/GameManager.cs Line: 49)
 
-[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 0000028E76A5FD60)
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 000002B7D35E7EC0)
 
 Mono: successfully reloaded assembly
-- Completed reload, in  2.377 seconds
+- Completed reload, in  4.201 seconds
 Domain Reload Profiling:
-	ReloadAssembly (2378ms)
-		BeginReloadAssembly (171ms)
+	ReloadAssembly (4202ms)
+		BeginReloadAssembly (264ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (11ms)
+			DisableScriptedObjects (12ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (65ms)
-		EndReloadAssembly (2086ms)
-			LoadAssemblies (115ms)
+			CreateAndSetChildDomain (105ms)
+		EndReloadAssembly (3749ms)
+			LoadAssemblies (190ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (327ms)
-			ReleaseScriptCaches (2ms)
-			RebuildScriptCaches (149ms)
-			SetupLoadedEditorAssemblies (1412ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (41ms)
-				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (142ms)
-				ProcessInitializeOnLoadAttributes (989ms)
-				ProcessInitializeOnLoadMethodAttributes (228ms)
-				AfterProcessingInitializeOnLoad (9ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (8ms)
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
-  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
-
-Script error: OnTriggerExit
-This message parameter has to be of type: Collider
-The message will be ignored.
-Refreshing native plugins compatible for Editor in 6.70 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6150 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 77 unused Assets / (1.6 MB). Loaded Objects now: 6941.
-Memory consumption went from 278.3 MB to 276.7 MB.
-Total: 41.932600 ms (FindLiveObjects: 0.700700 ms CreateObjectMapping: 0.770000 ms MarkObjects: 40.009400 ms  DeleteObjects: 0.450700 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.018157 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
-  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
-
-Refreshing native plugins compatible for Editor in 1.48 ms, found 8 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-GameView is null!
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogError (object)
-GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
-GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
-System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
-UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
-
-(Filename: Assets/Scripts/GameManager.cs Line: 49)
-
-[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 0000028E74DE62C0)
-
-Mono: successfully reloaded assembly
-- Completed reload, in  2.314 seconds
-Domain Reload Profiling:
-	ReloadAssembly (2315ms)
-		BeginReloadAssembly (161ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (49ms)
-		EndReloadAssembly (2028ms)
-			LoadAssemblies (127ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (384ms)
+			SetupTypeCache (706ms)
 			ReleaseScriptCaches (3ms)
-			RebuildScriptCaches (84ms)
-			SetupLoadedEditorAssemblies (1313ms)
+			RebuildScriptCaches (118ms)
+			SetupLoadedEditorAssemblies (2573ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (39ms)
+				InitializePlatformSupportModulesInManaged (133ms)
 				SetLoadedEditorAssemblies (1ms)
-				RefreshPlugins (2ms)
-				BeforeProcessingInitializeOnLoad (151ms)
-				ProcessInitializeOnLoadAttributes (850ms)
-				ProcessInitializeOnLoadMethodAttributes (257ms)
-				AfterProcessingInitializeOnLoad (14ms)
-				EditorAssembliesLoaded (0ms)
+				RefreshPlugins (4ms)
+				BeforeProcessingInitializeOnLoad (294ms)
+				ProcessInitializeOnLoadAttributes (1731ms)
+				ProcessInitializeOnLoadMethodAttributes (381ms)
+				AfterProcessingInitializeOnLoad (28ms)
+				EditorAssembliesLoaded (1ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (34ms)
 Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
@@ -753,12 +715,12 @@ MissingMethodException: Method not found: void UnityEditor.PlayerSettings.Regist
 Script error: OnTriggerExit
 This message parameter has to be of type: Collider
 The message will be ignored.
-Refreshing native plugins compatible for Editor in 8.73 ms, found 8 plugins.
+Refreshing native plugins compatible for Editor in 12.37 ms, found 8 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 6150 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 77 unused Assets / (1.6 MB). Loaded Objects now: 6957.
-Memory consumption went from 278.3 MB to 276.7 MB.
-Total: 8.124500 ms (FindLiveObjects: 0.651900 ms CreateObjectMapping: 0.517000 ms MarkObjects: 6.682500 ms  DeleteObjects: 0.272000 ms)
+Unloading 6210 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.9 MB). Loaded Objects now: 7002.
+Memory consumption went from 283.7 MB to 281.8 MB.
+Total: 10.515100 ms (FindLiveObjects: 0.722100 ms CreateObjectMapping: 0.759200 ms MarkObjects: 8.446800 ms  DeleteObjects: 0.585400 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -771,3 +733,253 @@ AssetImportParameters requested are different than current active one (requested
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.045599 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 2.68 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+FSR: Fast Script Reload - asset auto refresh enabled - full reload will be triggered unless editor preference adjusted - see documentation for more details.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogInternal (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogWarning (object)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:EnsureUserAwareOfAutoRefresh () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:912)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:InitCommon () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:888)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:.cctor () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:881)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs Line: 912)
+
+System.TypeInitializationException: The type initializer for 'FastScriptReload.Editor.Compilation.DynamicCompilationBase' threw an exception. ---> System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer.InitCommon () [0x0000d] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:890 
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer..cctor () [0x0004c] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:881 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 000002B7D40D5230)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  4.306 seconds
+Domain Reload Profiling:
+	ReloadAssembly (4307ms)
+		BeginReloadAssembly (337ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (12ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (118ms)
+		EndReloadAssembly (3720ms)
+			LoadAssemblies (263ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (817ms)
+			ReleaseScriptCaches (3ms)
+			RebuildScriptCaches (120ms)
+			SetupLoadedEditorAssemblies (2414ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (56ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (258ms)
+				ProcessInitializeOnLoadAttributes (1787ms)
+				ProcessInitializeOnLoadMethodAttributes (287ms)
+				AfterProcessingInitializeOnLoad (21ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (24ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Script error: OnTriggerExit
+This message parameter has to be of type: Collider
+The message will be ignored.
+Refreshing native plugins compatible for Editor in 34.21 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6210 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 88 unused Assets / (1.9 MB). Loaded Objects now: 7018.
+Memory consumption went from 283.7 MB to 281.8 MB.
+Total: 23.514000 ms (FindLiveObjects: 1.453200 ms CreateObjectMapping: 2.231000 ms MarkObjects: 18.677800 ms  DeleteObjects: 1.150000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.087056 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Refreshing native plugins compatible for Editor in 3.20 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+FSR: Fast Script Reload - asset auto refresh enabled - full reload will be triggered unless editor preference adjusted - see documentation for more details.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogInternal (UnityEngine.LogType,object)
+ImmersiveVrToolsCommon.Runtime.Logging.LoggerScoped:LogWarning (object)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:EnsureUserAwareOfAutoRefresh () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:912)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:InitCommon () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:888)
+FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer:.cctor () (at Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs:881)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Library/PackageCache/com.fastscriptreload@561be60ec4/Scripts/Editor/FastScriptReloadWelcomeScreen.cs Line: 912)
+
+System.TypeInitializationException: The type initializer for 'FastScriptReload.Editor.Compilation.DynamicCompilationBase' threw an exception. ---> System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+   --- End of inner exception stack trace ---
+  at (wrapper managed-to-native) System.Object.__icall_wrapper_mono_generic_class_init(intptr)
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer.InitCommon () [0x0000d] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:890 
+  at FastScriptReload.Editor.FastScriptReloadWelcomeScreenInitializer..cctor () [0x0004c] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\FastScriptReloadWelcomeScreen.cs:881 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+System.InvalidOperationException: Sequence contains no matching element
+  at System.Linq.Enumerable.First[TSource] (System.Collections.Generic.IEnumerable`1[T] source, System.Func`2[T,TResult] predicate) [0x00011] in <1e18c5a6594041c9844bfd0b6618ee4a>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase+<>c.<.cctor>b__8_0 () [0x00000] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:66 
+  at ImmersiveVRTools.Editor.Common.Cache.SessionStateCache.GetOrCreateString (System.String key, System.Func`1[TResult] create) [0x0001d] in <9139b57e70db41b1b3e8ae7302e30088>:0 
+  at FastScriptReload.Editor.Compilation.DynamicCompilationBase..cctor () [0x00038] in C:\Users\rasen\OneDrive\Desktop\Unity Projects\Developing-A-Game\Library\PackageCache\com.fastscriptreload@561be60ec4\Scripts\Editor\Compilation\DynamicCompilationBase.cs:64 
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+GameView is null!
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogError (object)
+GameManager/FixResolutionScale:SetGameViewScale () (at Assets/Scripts/GameManager.cs:49)
+GameManager/FixResolutionScale:.cctor () (at Assets/Scripts/GameManager.cs:34)
+System.Runtime.CompilerServices.RuntimeHelpers:RunClassConstructor (System.RuntimeTypeHandle)
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
+
+(Filename: Assets/Scripts/GameManager.cs Line: 49)
+
+[Package Manager] Request::StartRequest -- [GET] [http://127.0.0.1:0/project/dependencies] (Id: 000002B7D40D94F0)
+
+Mono: successfully reloaded assembly
+- Completed reload, in  6.385 seconds
+Domain Reload Profiling:
+	ReloadAssembly (6392ms)
+		BeginReloadAssembly (1178ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (121ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (505ms)
+		EndReloadAssembly (4753ms)
+			LoadAssemblies (636ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (1226ms)
+			ReleaseScriptCaches (9ms)
+			RebuildScriptCaches (154ms)
+			SetupLoadedEditorAssemblies (2747ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (72ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (3ms)
+				BeforeProcessingInitializeOnLoad (318ms)
+				ProcessInitializeOnLoadAttributes (1907ms)
+				ProcessInitializeOnLoadMethodAttributes (421ms)
+				AfterProcessingInitializeOnLoad (23ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (29ms)
+Native extension for WindowsStandalone target not found
+Native extension for iOS target not found
+Native extension for Android target not found
+MissingMethodException: Method not found: void UnityEditor.PlayerSettings.RegisterPlatformIconProvider(UnityEditor.BuildTargetGroup,UnityEditor.IPlatformIconProvider)
+  at UnityEditor.Modules.ModuleManager.InitializePlatformSupportModules () [0x0009d] in <780782bc035845f9909cebbd4c983ae3>:0 
+
+Script error: OnTriggerExit
+This message parameter has to be of type: Collider
+The message will be ignored.
+Refreshing native plugins compatible for Editor in 35.01 ms, found 8 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 6209 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 89 unused Assets / (1.9 MB). Loaded Objects now: 7033.
+Memory consumption went from 283.8 MB to 281.8 MB.
+Total: 23.366700 ms (FindLiveObjects: 1.629800 ms CreateObjectMapping: 1.075300 ms MarkObjects: 19.617000 ms  DeleteObjects: 1.041600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 14541.495951 seconds.
+  path: Assets/Ripple.shadergraph
+  artifactKey: Guid(7c9f172ed2d79df4e88a2e0a6aa7fc37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Ripple.shadergraph using Guid(7c9f172ed2d79df4e88a2e0a6aa7fc37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da47e5b4a8d1fde322d92f047731de6f') in 1.887402 seconds 

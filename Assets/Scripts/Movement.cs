@@ -10,6 +10,7 @@ using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.InputSystem;
+using SoulSpliter;
 
 [RequireComponent(typeof(PlayerInput))]
 /// <summary>
@@ -22,6 +23,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     public static Movement instance;
     [HideInInspector] public Rigidbody2D rb;
     public AfterImage afterImage;
+    public ShockWaveManager shockWaveManager;
     public PlayerRunData Data;
     public AudioSource footstepSFX;
     public AudioClip LandingAudioClip;
@@ -100,6 +102,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<AnimationScript>();
         footstepSFX = GetComponent<AudioSource>();
+        shockWaveManager = GetComponentInChildren<ShockWaveManager>();
     }
     private void Awake()
     {
@@ -142,6 +145,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
 
     void Update()
     {
+        //FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
         float xRaw = Input.GetAxisRaw("Horizontal");
@@ -236,6 +240,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         {
             if (xRaw != 0 || yRaw != 0)
                 Dash(xRaw, yRaw);
+            shockWaveManager.CallShockwave();
         }
 
         if (coll.onGround && !groundTouch)
@@ -356,8 +361,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     {
         Camera.main.transform.DOComplete();
         Camera.main.transform.DOShakePosition(.2f, .5f, 14, 90, false, true);
-        FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
-
+        //FindObjectOfType<RippleEffect>().Emit(Camera.main.WorldToViewportPoint(transform.position));
         hasDashed = true;
 
         anim.SetTrigger("dash");
