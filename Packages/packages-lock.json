@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.aarthificial.reanimation": {
+      "version": "0.0.2",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://package.openupm.com"
+    },
     "com.av.smart-inspector": {
       "version": "0.8.0-pre.1",
       "depth": 0,
@@ -8,7 +15,7 @@
       "url": "https://package.openupm.com"
     },
     "com.cammin.ldtkunity": {
-      "version": "3.3.1",
+      "version": "3.3.3",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
@@ -20,6 +27,13 @@
       "source": "git",
       "dependencies": {},
       "hash": "cfcde2d6cc694e631290a7110c9bf26ce2452f66"
+    },
+    "com.handzlikchris.fastscriptreload": {
+      "version": "https://github.com/handzlikchris/FastScriptReload.git?path=Assets",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "a3df94f9a49cca348e3d003321fc28b3ecf2a87e"
     },
     "com.stoneshelter.guid": {
       "version": "https://github.com/stonesheltergames/Unity-GUID.git",
@@ -123,18 +137,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.cinemachine": {
-      "version": "2.8.4",
-      "depth": 0,
-      "source": "registry",
-      "dependencies": {},
-      "url": "https://packages.unity.com"
-    },
-    "com.unity.collab-proxy": {
-      "version": "1.15.16",
+      "version": "2.8.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.services.core": "1.0.1"
+        "com.unity.test-framework": "1.1.31"
       },
       "url": "https://packages.unity.com"
     },
@@ -163,7 +170,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.rider": {
-      "version": "3.0.13",
+      "version": "3.0.24",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -319,7 +326,7 @@
       }
     },
     "com.unity.test-framework": {
-      "version": "1.1.31",
+      "version": "1.1.33",
       "depth": 0,
       "source": "registry",
       "dependencies": {

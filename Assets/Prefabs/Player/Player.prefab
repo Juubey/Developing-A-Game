@@ -5794,8 +5794,8 @@ MonoBehaviour:
   OGMaterial: {fileID: 2100000, guid: 5bb80753456c94c448336179329148c7, type: 2}
   healthBar: {fileID: 0}
   Movement: {fileID: 4725133697181805897}
-  cameraShaker: {fileID: 0}
-  timeFreezer: {fileID: 0}
+  cameraShaker: {fileID: 1800157140134878712}
+  timeFreezer: {fileID: 1383563832969779735}
   isAlive: 1
 --- !u!58 &7182841214873245007
 CircleCollider2D:
