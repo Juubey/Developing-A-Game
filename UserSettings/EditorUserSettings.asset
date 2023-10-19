@@ -68,6 +68,9 @@ EditorUserSettings:
     UnityRemoteResolution:
       value: 2d5e460b0459
       flags: 0
+    glTF.saveFilePath:
+      value: 200b683316501b48311c0d31152d633f18123c38253e230c092c0e38f6ef24
+      flags: 0
     upmLogLevel:
       value: 50
       flags: 0

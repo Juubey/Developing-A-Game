@@ -37,7 +37,14 @@ MonoBehaviour:
     - com.aarthificial.pixelgraphics
     m_IsDefault: 0
     m_Capabilities: 0
-  m_UserSelectedRegistryName: package.openupm.com
+  - m_Id: scoped:OpenUPM
+    m_Name: OpenUPM
+    m_Url: https://package.openupm.com
+    m_Scopes:
+    - com.atteneder
+    m_IsDefault: 0
+    m_Capabilities: 0
+  m_UserSelectedRegistryName: OpenUPM
   m_UserAddingNewScopedRegistry: 0
   m_RegistryInfoDraft:
     m_Modified: 0
