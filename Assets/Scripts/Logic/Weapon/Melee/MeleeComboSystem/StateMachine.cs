@@ -1,3 +1,4 @@
+using Aarthificial.Reanimation;
 using UnityEngine;
 
 public class StateMachine : MonoBehaviour
@@ -7,8 +8,14 @@ public class StateMachine : MonoBehaviour
     private State mainStateType;
 
     public State CurrentState { get; private set; }
-    private State nextState;
+    public Animator animator { get; private set; }
 
+    private State nextState;
+    void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+
+    }
     // Update is called once per frame
     void Update()
     {
@@ -17,17 +24,13 @@ public class StateMachine : MonoBehaviour
             SetState(nextState);
         }
 
-        if (CurrentState != null)
-            CurrentState.OnUpdate();
+        CurrentState?.OnUpdate();
     }
 
     private void SetState(State _newState)
     {
         nextState = null;
-        if (CurrentState != null)
-        {
-            CurrentState.OnExit();
-        }
+        CurrentState?.OnExit();
         CurrentState = _newState;
         CurrentState.OnEnter(this);
     }
@@ -42,14 +45,12 @@ public class StateMachine : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (CurrentState != null)
-            CurrentState.OnLateUpdate();
+        CurrentState?.OnLateUpdate();
     }
 
     private void FixedUpdate()
     {
-        if (CurrentState != null)
-            CurrentState.OnFixedUpdate();
+        CurrentState?.OnFixedUpdate();
     }
 
     public void SetNextStateToMain()

@@ -1,0 +1,18 @@
+Created by MENARD Isaac
+Version 1.0.1
+
+To open checkpoints manager creator use:
+Tools > CheckPoints Manager
+
+To use the tool with c# script, use : 
+ - "Player.GetComponent<Player_Checkpoint>().teleportToCheckpoint();" --> Teleport the player to the 'current checkpoint '
+ - "Player.GetComponent<Player_Checkpoint>().currentCheckpoint = checkPoint.gameObject;" --> Change the 'current checkpoint' variable.
+Note that there is a 'OnTriggerEnter' event on each checkpoint that automatically change the 'current checkpoint' variable.
+
+Portfolio: https://isaacmenard.github.io/
+Linkedin: https://www.linkedin.com/in/isaac-menard/
+
+Suggestions to improve the code, or functionality please reach out to me menardisaac@gmail.com
+
+Any issues please report in an email to menardisaac@gmail.com
+In the email please state what were the steps you took to encounter the error. Screenshots are encouraged.

@@ -25,13 +25,12 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     public AfterImage afterImage;
     public ShockWaveManager shockWaveManager;
     public PlayerRunData Data;
-    public AudioSource footstepSFX;
-    public AudioClip LandingAudioClip;
-    public AudioClip[] FootstepAudioClips;
-    [Range(0, 1)] public float FootstepAudioVolume = 0.5f;
+    private StateMachine meleeStateMachine;
+
 
     [Space]
     public int side = 1;
+    [System.NonSerialized] public string groundType = "normal";
     #endregion
 
     #region Public Floats
@@ -55,6 +54,8 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     public bool wallSlide;
     public bool isDashing;
     public bool isMoving = false;
+    [System.NonSerialized] public bool pounded;
+    [System.NonSerialized] public bool pounding;
     #endregion
 
     #region Public ParticleSystem
@@ -68,11 +69,37 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
     public ParticleSystem PowerUpParticle;
     #endregion
 
+    #region public audioclips
+    [Header("Sounds")]
+    public AudioSource playerSFX;
+    public AudioClip LandingAudioClip;
+    public AudioClip[] FootstepAudioClips;
+    [Range(0.9f, 1.1f)] public float FootstepAudioVolume;
+    public AudioClip deathSound;
+    public AudioClip equipSound;
+    public AudioClip groundSound;
+    public AudioClip wetGroundSound;
+    public AudioClip rainSound;
+    public AudioClip hurtSound;
+    public AudioClip[] hurtSounds;
+    public AudioClip holsterSound;
+    public AudioClip jumpSound;
+    public AudioClip landSound;
+    public AudioClip poundSound;
+    public AudioClip punchSound;
+    public AudioClip[] poundActivationSounds;
+    public AudioClip outOfAmmoSound;
+    public AudioClip stepSound;
+    [System.NonSerialized] public int whichHurtSound;
+    #endregion
+
     #region private variables
     private Collision coll;
     [HideInInspector] private AnimationScript anim;
-    public BoxCollider2D hitbox;
     public GameObject shotPoint;
+
+    [SerializeField] public Collider2D meleeHitbox;
+    [SerializeField] public GameObject hitEffect;
 
     [Space]
     private bool hasDashed;
@@ -101,8 +128,10 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         coll = GetComponent<Collision>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<AnimationScript>();
-        footstepSFX = GetComponent<AudioSource>();
+        playerSFX = GetComponent<AudioSource>();
         shockWaveManager = GetComponentInChildren<ShockWaveManager>();
+        SetGroundType();
+        meleeStateMachine = GetComponent<StateMachine>();
     }
     private void Awake()
     {
@@ -278,8 +307,8 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         {
             side = 1;
             anim.Flip(side);
-            //CreateDust();
-            hitbox.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+            CreateDust();
+            meleeHitbox.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
             shotPoint.transform.localPosition = new Vector3(2, 0, 0);
 
         }
@@ -287,8 +316,8 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         {
             side = -1;
             anim.Flip(side);
-            //CreateDust();
-            hitbox.transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
+            CreateDust();
+            meleeHitbox.transform.rotation = new Quaternion(0f, 180f, 0f, 0f);
             shotPoint.transform.localPosition = new Vector3(-2, 0, 0);
         }
 
@@ -299,7 +328,6 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
             {
                 flipped = true;
                 if (flipped == true)
-                    CreateDust();
                 return;
             }
             else
@@ -317,11 +345,21 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
             isMoving = false;
         if (isMoving)
         {
-            if (!footstepSFX.isPlaying)
-                footstepSFX.Play();
+            if (!playerSFX.isPlaying)
+                playerSFX.Play();
         }
         else
-            footstepSFX.Pause();
+            playerSFX.Pause();
+
+        if (groundTouch)
+        {
+            if (Input.GetMouseButton(1) && meleeStateMachine.CurrentState.GetType() == typeof(IdleCombatState))
+            {
+                meleeStateMachine.SetNextState(new GroundEntryState());
+            }
+        }
+        else
+            anim.SetTrigger("pounded");
 
     }
 
@@ -350,7 +388,7 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
 
     void CreateDust()
     {
-        dustParticle.Play();
+        dustParticle.Emit(1);
     }
 
     /// <summary>
@@ -553,6 +591,20 @@ public class Movement : MonoBehaviour, IDataPersistence/*, EnemyHandler.IEnemyTa
         set
         {
             groundedTimer = value ? 10f : groundedTimer;
+        }
+    }
+
+    public void SetGroundType()
+    {
+        //If we want to add variable ground types with different sounds, it can be done here
+        switch (groundType)
+        {
+            case "normal":
+                stepSound = groundSound;
+                break;
+            case "wet":
+                stepSound = wetGroundSound;
+                break;
         }
     }
     #endregion

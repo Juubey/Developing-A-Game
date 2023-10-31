@@ -5607,8 +5607,6 @@ GameObject:
   - component: {fileID: 2018794753}
   - component: {fileID: 5124769668861637607}
   - component: {fileID: 3562970051033159300}
-  - component: {fileID: 1800157140134878712}
-  - component: {fileID: 1383563832969779735}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -5704,10 +5702,6 @@ MonoBehaviour:
   afterImage: {fileID: 1812167691452957256}
   shockWaveManager: {fileID: 920381295}
   Data: {fileID: 11400000, guid: dbdad55d53d3d3341b30eb894f9ad235, type: 2}
-  footstepSFX: {fileID: 3562970051033159300}
-  LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
-  FootstepAudioClips: []
-  FootstepAudioVolume: 0.051
   side: 1
   speed: 12
   jumpForce: 36
@@ -5727,6 +5721,25 @@ MonoBehaviour:
   slideParticle: {fileID: 8099239021518373164}
   dustParticle: {fileID: 6298267229735209725}
   PowerUpParticle: {fileID: 855016744254170308}
+  playerSFX: {fileID: 0}
+  LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
+  FootstepAudioClips: []
+  FootstepAudioVolume: 0.051
+  deathSound: {fileID: 0}
+  equipSound: {fileID: 0}
+  groundSound: {fileID: 0}
+  wetGroundSound: {fileID: 0}
+  rainSound: {fileID: 0}
+  hurtSound: {fileID: 0}
+  hurtSounds: []
+  holsterSound: {fileID: 0}
+  jumpSound: {fileID: 0}
+  landSound: {fileID: 0}
+  poundSound: {fileID: 0}
+  punchSound: {fileID: 0}
+  poundActivationSounds: []
+  outOfAmmoSound: {fileID: 0}
+  stepSound: {fileID: 0}
   hitbox: {fileID: 324240049156246726}
   shotPoint: {fileID: 1262483537879185905}
   playerAttributesSO: {fileID: 11400000, guid: 4154671f3961811478f73399985071ad, type: 2}
@@ -5793,8 +5806,8 @@ MonoBehaviour:
   OGMaterial: {fileID: 2100000, guid: 5bb80753456c94c448336179329148c7, type: 2}
   healthBar: {fileID: 0}
   Movement: {fileID: 4725133697181805897}
-  cameraShaker: {fileID: 1800157140134878712}
-  timeFreezer: {fileID: 1383563832969779735}
+  cameraShaker: {fileID: 0}
+  timeFreezer: {fileID: 0}
   isAlive: 1
 --- !u!58 &7182841214873245007
 CircleCollider2D:
@@ -6064,7 +6077,7 @@ MonoBehaviour:
   - {x: 0.5, y: -1, z: 0}
   m_ShapePathHash: 0
   m_Mesh: {fileID: 0}
-  m_InstanceId: -1922
+  m_InstanceId: -1924
 --- !u!114 &2018794753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6101,7 +6114,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 2e4a2801e04f7944ca8a87b26a6730db, type: 2}
-  m_audioClip: {fileID: 8300000, guid: fbb785cbf8d3f3245ad2f775468463e0, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 0.4
   m_Pitch: 0.6
@@ -6187,30 +6200,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1800157140134878712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4725133697181805909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a16877ee32165824ca51726c82068709, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1383563832969779735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4725133697181805909}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 89839124255de4a49882867dec07ec59, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4755728639714306105
 GameObject:
   m_ObjectHideFlags: 0
@@ -11541,8 +11530,6 @@ GameObject:
   - component: {fileID: 8099239020980743418}
   - component: {fileID: 8099239020980743419}
   - component: {fileID: 8099239021227005968}
-  - component: {fileID: 6263159099069133313}
-  - component: {fileID: 2941789541722900547}
   m_Layer: 13
   m_Name: Visual
   m_TagString: Player
@@ -11665,33 +11652,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 4725133697181805900}
---- !u!114 &6263159099069133313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8099239020980743423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4329b45174033774a9d7bd823fb5a4d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  customName: Combat
---- !u!114 &2941789541722900547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8099239020980743423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95b56deda9fd8394ba703d82ca4ac424, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hitbox: {fileID: 324240049156246726}
-  Hiteffect: {fileID: 8690950337773083281, guid: 803b96fa8ebd5a749bdf32bd0e553139, type: 3}
 --- !u!1 &8099239021021862648
 GameObject:
   m_ObjectHideFlags: 0

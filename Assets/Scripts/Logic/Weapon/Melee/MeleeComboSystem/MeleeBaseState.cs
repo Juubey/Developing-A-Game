@@ -25,13 +25,15 @@ public class MeleeBaseState : State
     // Input buffer Timer
     private float AttackPressedTimer = 0;
 
+    private StateMachine meleeStateMachine;
+
     public override void OnEnter(StateMachine _stateMachine)
     {
         base.OnEnter(_stateMachine);
-        animator = GetComponent<Animator>();
+        animator = GetComponent<StateMachine>().animator;
         collidersDamaged = new List<Collider2D>();
-        hitCollider = GetComponent<ComboCharacter>().hitbox;
-        HitEffectPrefab = GetComponent<ComboCharacter>().Hiteffect;
+        hitCollider = GetComponent<Movement>().meleeHitbox;
+        HitEffectPrefab = GetComponent<Movement>().hitEffect;
     }
 
     public override void OnUpdate()

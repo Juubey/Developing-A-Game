@@ -56,6 +56,12 @@
       "dependencies": {},
       "hash": "a3df94f9a49cca348e3d003321fc28b3ecf2a87e"
     },
+    "com.kyrylokuzyk.primetween": {
+      "version": "file:../Assets/Plugins/PrimeTween/internal/com.kyrylokuzyk.primetween.tgz",
+      "depth": 0,
+      "source": "local-tarball",
+      "dependencies": {}
+    },
     "com.stoneshelter.guid": {
       "version": "https://github.com/stonesheltergames/Unity-GUID.git",
       "depth": 0,
